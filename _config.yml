@@ -40,7 +40,7 @@ owner:
     ad-client: 
     ad-slot: 
   bing-verify: 
-  github: https://github.com/cctanfujun
+  github: cctanfujun
   stackoverflow: #http://stackoverflow.com/users/123456/username
   linkedin: #username
   xing: #username
@@ -53,7 +53,7 @@ owner:
   dribbble: #username
   youtube: #username
   soundcloud: #username
-  weibo: http://weibo.com/xiaochendev
+  weibo: xiaochendev
   flickr: #username
 
 include: [".htaccess"]
