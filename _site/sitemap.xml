@@ -1,43 +1,35 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
-    <loc>/readability-feature-post/</loc>
-    <lastmod>2015-05-23T00:00:00+08:00</lastmod>
-  </url>
-  <url>
-    <loc>/%E6%B5%8B%E8%AF%95/</loc>
-    <lastmod>2015-04-17T00:00:00+08:00</lastmod>
-  </url>
-  <url>
     <loc>/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/</loc>
     <lastmod>2015-04-17T00:00:00+08:00</lastmod>
   </url>
   <url>
-    <loc>/code-highlighting-post/</loc>
-    <lastmod>2015-01-16T00:00:00+08:00</lastmod>
+    <loc>/%E4%BD%BF%E7%94%A8%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/</loc>
+    <lastmod>2015-01-01T00:00:00+08:00</lastmod>
   </url>
   <url>
     <loc>/about/</loc>
-    <lastmod>2015-04-17T16:11:35+08:00</lastmod>
+    <lastmod>2015-04-18T14:41:06+08:00</lastmod>
   </url>
   <url>
     <loc>/</loc>
-    <lastmod>2015-04-17T16:11:35+08:00</lastmod>
+    <lastmod>2015-04-18T14:41:06+08:00</lastmod>
   </url>
   <url>
     <loc>/theme-android/</loc>
-    <lastmod>2015-04-17T16:11:35+08:00</lastmod>
+    <lastmod>2015-04-18T14:41:06+08:00</lastmod>
   </url>
   <url>
     <loc>/theme-ios/</loc>
-    <lastmod>2015-04-17T16:11:35+08:00</lastmod>
+    <lastmod>2015-04-18T14:41:06+08:00</lastmod>
   </url>
   <url>
     <loc>/theme-network/</loc>
-    <lastmod>2015-04-17T16:11:35+08:00</lastmod>
+    <lastmod>2015-04-18T14:41:06+08:00</lastmod>
   </url>
   <url>
     <loc>/posts/</loc>
-    <lastmod>2015-04-17T16:11:35+08:00</lastmod>
+    <lastmod>2015-04-18T14:41:06+08:00</lastmod>
   </url>
 </urlset>

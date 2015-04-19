@@ -1,8 +1,8 @@
 ---
 layout: page
-title: Theme Setup
-modified: 2014-07-31T13:23:02.362000-04:00
-excerpt: "Instructions on how to install and customize the Jekyll theme Minimal Mistakes."
+title: iOS学习相关
+modified: 2014-04-17T13:23:02.362000-04:00
+excerpt: "在这里我将整理很多iOS开发相关的文章，谢谢关注."
 image:
   feature: sample-image-4.jpg
   

@@ -1,10 +1,11 @@
 ---
 layout: page
-title: Android开源相关
-modified: 2014-07-31T13:23:02.362000-04:00
-excerpt: "Instructions on how to install and customize the Jekyll theme Minimal Mistakes."
+title: Android学习相关
+modified: 2015-04-17T13:23:02.362000-04:00
+excerpt: "在这里我会整理很多Android开发资料技巧"
 image:
   feature: sample-image-3.jpg
+
   
 ---
 
