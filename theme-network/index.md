@@ -4,7 +4,7 @@ title: 互联网学习
 modified: 2014-07-31T13:23:02.362000-04:00
 excerpt: "在这里我将分享一些，如mac使用技巧，设计模式，或者聊聊人生感想"
 image:
-  feature: sample-image-5.jpg
+  feature: sample-image-1.jpg
   
 ---
 
