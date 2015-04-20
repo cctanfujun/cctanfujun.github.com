@@ -2,6 +2,9 @@
 - title: 首页
   url: //cctanfujun.github.io/
 
+- title: 文章轨迹
+  url: /posts/
+
 - title: Android学习
   url: /theme-android/
 
@@ -11,8 +14,7 @@
 - title: 互联网Tips
   url: /theme-network/
 
-- title: 文章轨迹
-  url: /posts/
+
 
 - title: 关于我
   url: /about/
