@@ -13,4 +13,4 @@
 
 你可以参考**[使用我的博客作为模版教程](http://tanfujun.cc/%E4%BD%BF%E7%94%A8%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/)**
 
-![Mac快捷键]({{ http://tanfujun.cc }}/images/blog.png)
+![晓_晨DEV的博客]({{ site.url }}/images/blog.png)
