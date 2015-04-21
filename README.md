@@ -11,6 +11,6 @@
 
 ## 使用我的模版
 
-你可以参考**[使用我的博客作为模版教程](http://tanfujun.cc/%E4%BD%BF%E7%94%A8%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/)**
+如果你想使用我的博客作为模版，你可以参考**[使用我的博客作为模版教程](http://tanfujun.cc/%E4%BD%BF%E7%94%A8%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/)**
 
 ![晓_晨DEV的博客](http://cctanfujun.github.io/images/blog.png)
