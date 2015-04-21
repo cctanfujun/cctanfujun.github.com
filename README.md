@@ -1,6 +1,15 @@
-# Minimal Mistakes
+# 晓_晨DEV的博客
+本博客修改自
+**[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** 使用jekyll搭建
 
-**[Minimal Mistakes](http://mmistakes.github.io/minimal-mistakes)** is a two column responsive Jekyll theme perfect for powering your GitHub hosted blog. 
+##修改内容  
+* 修改国外评论插件为多说  
+* 修改SNS分享，为百度分享
+* 取消了下角提示主背景图链接功能
+* 修改原来模版使用资源链接，解决在国内加载速度慢问题
+
+
+ 
 
 ## Minimal Mistakes is all about:
 

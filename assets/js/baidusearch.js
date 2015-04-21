@@ -1,0 +1,13 @@
+document.writeln(<form action="http://www.baidu.com/baidu" target="_blank">);
+document.writeln(<table bgcolor="#FFFFFF">);
+document.writeln(<tr>);
+document.writeln(<td>);
+document.writeln(<input name=tn type=hidden value=baidu>);
+document.writeln(<a href="http://www.baidu.com/"><img src="http://img.baidu.com/img/logo-80px.gif" alt="Baidu" align="bottom" border="0">);
+document.writeln(</a>);
+document.writeln(<input type=text name=word size=30>);
+document.writeln(<input type="submit" value="百度搜索">);
+document.writeln(</td>);
+document.writeln(</tr>);
+document.writeln(</table>);
+document.writeln(</form>);
