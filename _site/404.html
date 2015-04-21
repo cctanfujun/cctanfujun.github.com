@@ -164,41 +164,14 @@
     <div class="article-wrap">
       <p>对不起你找的东西从地球上消失了 — 试试搜索吧.</p>
 
-<p>&lt;form name=f action=http://www.baidu.com/s&gt;&lt;input type=text name=wd id=kw size=35 maxlength=100&gt;&lt;input type=hidden name=tn value=”jqshw_pg”&gt;&lt;input type=hidden name=bar value=””&gt;&lt;input type=submit value=百度一下 id=sb&gt;&lt;/form&gt;</p>
-
-<script>
- var w = document.f.wd;
- function s(o) {
-  if (w.value.length > 0) {
- var h = o.href;
- var q = encodeURIComponent(w.value);
- if (h.indexOf("q=") != -1) {
-  o.href = h.replace(new RegExp("q=[^&$]*"), "q=" + q)
- } else {
-  o.href += "?q=" + q
- }
-  }
- }; (function() {
-  if (new RegExp("q=([^&]+)").test(location.search)) {
- w.value = decodeURIComponent(RegExp.$1)
-  }
- })();
-  document.write('<script src=http://www.baidu.com/js/bdsug.js?v=1.1.0.3><\/script>')
- window.onunload = function() {};
- </script>
-
-<script>
- w.focus()
- </script>
-
-<script type="text/javascript">
-  var GOOG_FIXURL_LANG = 'en';
-  var GOOG_FIXURL_SITE = ''
-</script>
-
-<script type="text/javascript" src="//linkhelp.clients.google.com/tbproxy/lh/wm/fixurl.js">
-</script>
-
+<form action="http://www.baidu.com/baidu" target="_blank">
+<table bgcolor="#FFFFFF"><tr><td>
+<input name="tn" type="hidden" value="baidu" />
+<a href="http://www.baidu.com/"><img src="http://img.baidu.com/img/logo-80px.gif" alt="Baidu" align="bottom" border="0" /></a></td>
+<td><input type="text" name="word" size="30" /></td>
+<td><input type="submit" value="百度搜索" />
+</td></tr></table>
+</form>
 
       
         <hr />
