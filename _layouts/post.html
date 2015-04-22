@@ -51,7 +51,7 @@
       <div class="ds-thread" data-thread-key="{{ page.id }}" data-title="{{ page.title }}" data-url="{{ site.url}}/{{page.url}}"></div>
       <!-- 多说评论框 end -->
       {% endif %}
-        <p class="byline"><strong>{{ page.title }}</strong> 发表于 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%B %d, %Y" }}</time>{% if page.modified %} 最后修改于 <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%B %d, %Y" }}</time>{% endif %}.</p>
+        <p class="byline"><strong>{{ page.title }}</strong> 发表于 <time datetime="{{ page.date | date_to_xmlschema }}">{{ page.date | date: "%Y-%m-%d" }}</time>{% if page.modified %} 最后修改于 <time datetime="{{ page.modified | date: "%Y-%m-%d" }}">{{ page.modified | date: "%Y-%m-%d" }}</time>{% endif %}.</p>
       </footer>
     </div><!-- /.article-wrap -->
    </article>
