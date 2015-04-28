@@ -4,13 +4,295 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-04-22T16:54:43+08:00</updated>
+<updated>2015-04-28T15:50:17+08:00</updated>
 <id>/</id>
 <author>
   <name>晓_晨DEV</name>
   <uri>/</uri>
   <email>cctanfujun@163.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[如果你现在学Android]]></title>
+  <link rel="alternate" type="text/html" href="/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/" />
+  <id>/如果你现在学Android</id>
+  <updated>2015-04-24T00:00:00-00:00</updated>
+  <published>2015-04-24T00:00:00+08:00</published>
+  
+  <author>
+    <name>晓_晨DEV</name>
+    <uri></uri>
+    <email>cctanfujun@163.com</email>
+  </author>
+  <content type="html">
+    &lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
+  &lt;header&gt;
+    &lt;h3&gt;&lt;i class=&quot;fa fa-book&quot;&gt;&lt;/i&gt; Overview&lt;/h3&gt;
+  &lt;/header&gt;
+&lt;div id=&quot;drawer&quot;&gt;
+&lt;ul id=&quot;markdown-toc&quot;&gt;
+  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;工欲善其事，必先利其器&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;学习路线&lt;/a&gt;    &lt;ul&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;入门级&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;进阶篇&lt;/a&gt;&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;高手篇&lt;/a&gt;        &lt;ul&gt;
+          &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;写在最后&lt;/a&gt;&lt;/li&gt;
+        &lt;/ul&gt;
+      &lt;/li&gt;
+    &lt;/ul&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+  &lt;/div&gt;
+&lt;/section&gt;
+&lt;!-- /#table-of-contents --&gt;
+
+&lt;p&gt;虽然现在网上有不少Android的教程，不过现在Android的发展已经到了5.1，很多之前的开发教程和学习建议已经不是很适用，决定以自己的见解写一篇Android学习的教程，如果大家有什么好的意见或建可以评论给我。&lt;/p&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;工欲善其事，必先利其器&lt;/h1&gt;
+&lt;p&gt;虽然Android开发的门槛比较低，但是有件得心应手的兵器还是很有必要的。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;开发设备 ： Mac &lt;/strong&gt;（作为开发者，我认为入手一台mac还是很有必要的，推荐还是mac pro，这种设备真的是早用早享受，如果你是学生党那么这真的是你对自己非常好的投资，如果你不是，那么我相信你是买得起的，购买渠道就不详细说了，港货确实能省一笔钱，官网分期无利息也是挺好的。如果你确定不购买的话，那么Linux开发也是比在Win下开发好一些的）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;调试设备 : 真机&lt;/strong&gt; (推荐使用真机调试，速度更快)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;模拟器 ：genymotion&lt;/strong&gt; （有时候还是要用到模拟器的，那么我推荐你使用geymotion，这货速度绝对比自带快很多，虽然自带模拟器也可以使用x86核心，不过速度依旧不如genymotion，缺点是现在下载需要梯子）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;IDE ：Android Studio&lt;/strong&gt; (这里我想到一句别人说过的话，如果你是Android开发老老手，那么我推荐你使用Android Studio，如果你是新手，那么我更要推荐你使用Android Studio。其实我发现很多人在学习过程中继续使用eclipse的原因是，他看的的书或者视频教程使用的是eclipse，他们和我说新手就该用eclipse，除了一些做NDK开发的，我说的是专业人士，其他人请你们换成AS吧，去学习一下使用AS，也会有不少提升，至少比你照着视频敲看不懂的代码好)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;梯子 : 云梯&lt;/strong&gt;（在我大天朝做开发有一架梯子还是很必要的，你可以去找一些免费的，不过速度确实渣。云梯是我用过的梯子里非常不错的，也有很多人推荐，你可以点我的推荐链接可以省一点钱！&lt;a href=&quot;http://kuaitizi.com/?r=868654b89611c354&quot;&gt;推荐链接&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h1 id=&quot;section-1&quot;&gt;学习路线&lt;/h1&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;入门级&lt;/h2&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;语言基础Java&lt;/strong&gt; （使用Java语言。现在开发Android的方式有很多，如Hybrid开发，但如果你是新手，我推荐你使用原生开发，使用Java语言，因为任何跨平台开发最后你的web和Native都要精通，不然你总有解决不了的的问题）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;Android官网&lt;/strong&gt;  &lt;a href=&quot;http://developer.android.com/&quot;&gt;http://developer.android.com/&lt;/a&gt;  （需梯子）&lt;br /&gt;
+(Android官网更新其实很快的，你应该经常上去看看，需要梯子，如果你英文不错把Training部分练习一遍，就基本可以写一些小东西了)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;学习ApiDemo&lt;/strong&gt;  ApiDemo 是很重要的，很多的功能其实Google官方以及帮我们做好了例子，只要学习一下就好了&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;学习视频&lt;/strong&gt; 其实我是很喜欢对着视频学习的，再用播放器调整为2-3倍速度播放，其实视频学习有利有弊吧，利就是你在学习一个知识点的时候，也附带学习了讲课者的思维方式，以及其他一些小知识点你也可能注意到（比如一些好用的插件，软件等）弊可能就是视频良莠不齐，开发方面的视频我并不认为存在什么经典，随着时间的流逝和技术的发展反而不再适用，盲目学习事倍功半。&lt;/p&gt;
+
+    &lt;p&gt;这里插入一个小广告吧，下载视频的话，可以关注我的微信公众平台晓晨学习组&lt;code&gt;（微信号：xiaochenAndroid）&lt;/code&gt;，在里面你能找到学习视频下载，都是我认为不错的学习资源。然后我想说的是视频教程，重要的是理解思想，写代码要关了视频敲一遍，照着写实现了也没有什么提高。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;遇到问题能Google少百度，可以到eoe找找，&lt;a href=&quot;stackoverflow&quot;&gt;stackoverflow&lt;/a&gt;，而且要多查查看看，注意文章日期，因为有些问题其实已经有了更好的解决方法，我举个例子，比如要在Android上实现下拉刷新，百度得到的内容基本都是使用pull-to-refresh这个第三方库，但是在Android官方提供的Support包里其实已经带了实现下拉刷新的快捷方法，而且效果更好。&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;进阶篇&lt;/h2&gt;
+&lt;p&gt;如果你完成了入门教程，那么你应该进阶了&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;学习使用Git&lt;/strong&gt;&lt;br /&gt;
+使用Git对于一个开发者来说是非常重要的。你并不需要成为一个Git专家，只要能正常使用基本就够了。我就推荐两个学习Git的教程吧！&lt;br /&gt;
+&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;1.&lt;a href=&quot;http://www.liaoxuefeng.com/wiki/0013739516305929606dd18361248578c67b8067c8c017b000&quot;&gt;廖雪峰的Git教程&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;2.&lt;a href=&quot;http://backlogtool.com/git-guide/cn/&quot;&gt;猴子都能懂的Git入门&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;关注一些&lt;strong&gt;开源项目&lt;/strong&gt;，并使用他们&lt;br /&gt;
+Android开源库真的太多了，如果你不是特别闲的话，就去关注些大公司，或者知名开发者的，这里我推荐一些资源&lt;br /&gt;
+ &lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://github.com/Trinea/android-open-project&quot;&gt;&lt;strong&gt;Android开源项目分类汇总&lt;/strong&gt;&lt;/a&gt; 这是Trinea发起的开源项目整理，我很喜欢他说的，我们不重复造轮子，不代表我们要不知道轮子的原理。&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;https://github.com/wasabeef/awesome-android-ui&quot;&gt;&lt;strong&gt;List of Android UI/UX Libraries&lt;/strong&gt;&lt;/a&gt; 整理了各种Android UI库&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://blog.daimajia.com/&quot;&gt;&lt;strong&gt;代码家的博客&lt;/strong&gt;&lt;/a&gt; 代码家的很多UI 动画库做的非常不错，在他的博客里也很容易找到他的Github，就不贴了。&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;http://codekk.com/open-source-project-analysis&quot;&gt;&lt;strong&gt;codeKK源码分析&lt;/strong&gt;&lt;/a&gt; 你可以看到些知名的库的分析&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;使用&lt;strong&gt;第三方服务&lt;/strong&gt;&lt;br /&gt;
+  除了开源库，你还可以使用很多第三方服务来加快你的开发（如百度地图，ShareSDk等等)&lt;br /&gt;
+这里我要推荐一个网站 &lt;a href=&quot;http://www.devstore.cn/&quot;&gt;DevStore&lt;/a&gt; 整理了大多数第三方开发者服务，不用你一个一个去找了。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;微博&lt;/strong&gt; &lt;br /&gt;
+  利用好微博这个工具，你可以关注一些开发者，微博上有很多乐于分享的人。你可以更快的的知道很新的开发的资讯。&lt;br /&gt;
+ &lt;br /&gt;
+我关注的人 &lt;a href=&quot;http://weibo.com/u/1628291124?topnav=1&amp;amp;wvr=6&amp;amp;topsug=1&quot;&gt;@代码家&lt;/a&gt;  &lt;a href=&quot;http://weibo.com/u/2942550243?topnav=1&amp;amp;wvr=6&amp;amp;topsug=1&quot;&gt;@googdev&lt;/a&gt;  &lt;a href=&quot;http://weibo.com/kaifazhetoutiao?from=myfollow_group&quot;&gt;@开发者头条&lt;/a&gt;  &lt;a href=&quot;http://weibo.com/chenqichao2016?from=myfollow_group&quot;&gt;@陈启超_V&lt;/a&gt;&lt;br /&gt;
+还有很多不一一贴了，请自行搜索&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;博客&lt;/strong&gt;&lt;br /&gt;
+ 关注知名开发者的博客也是非常好提高技术的办法，具体到关注谁的问题，我建议你到&lt;a href=&quot;&quot;&gt;知乎&lt;/a&gt;上提问，有很多大神整理好的，包括国内国外的，我这里就链接几个我收藏的，因为有些大神的技术深度我目前还消化不了。&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://tanfujun.cc/&quot;&gt;晓_晨DEV的博客&lt;/a&gt; 不错的博客，推荐关注&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.stormzhang.com/&quot;&gt;stormzhang博客精华&lt;/a&gt; 最近写了Android Studio的系列教程，推荐看看&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.daimajia.com/&quot;&gt;代码家的博客&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.trinea.cn/&quot;&gt;Trinea的博客&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.inferjay.com/&quot;&gt;脉脉不得语的技术博客&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://hukai.me/&quot;&gt;胡凯的博客&lt;/a&gt; 之前翻译的Android性能优化的文章转载率很高&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://hukai.me/android-training-course-in-chinese/index.html&quot;&gt;Android官方培训课程中文版(v0.9.1)&lt;/a&gt; 胡凯的github项目&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://chenqichao.me/&quot;&gt;ChenQichao’s Blog&lt;/a&gt; 感觉他好像对material design情有独钟&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://androidperformance.com/&quot;&gt;Android Performance&lt;/a&gt; 主要是些译文，与性能优化有关&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+
+    &lt;hr /&gt;
+    &lt;p&gt;下面是CSDN部分，这部分有些我没有读过，只是看到Mark下&lt;/p&gt;
+
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/android_tutor&quot;&gt;Android_Tutor的专栏&lt;/a&gt;  他写的“Android开发高手进阶教程”系列文章感觉不错&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/lmj623565791&quot;&gt;Hongyang&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/guolin_blog&quot;&gt;郭霖的专栏&lt;/a&gt;  《第一行代码》作者&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/singwhatiwanna&quot;&gt;任玉刚&lt;/a&gt; 百度的工程师&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/bboyfeiyu&quot;&gt;Mr.Simple的专栏&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/Luoshengyang/&quot;&gt;老罗的Android之旅&lt;/a&gt; 罗升阳大神，博文质量非常高，《Android系统源代码情景分析》作者&lt;/li&gt;
+      &lt;li&gt;&lt;a href=&quot;http://blog.csdn.net/innost&quot;&gt;Innost的专栏&lt;/a&gt;&lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;知乎专栏&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;我之前有订阅AndroidWeekly邮件，不过是全英文的，可能是英文水平没有那么高看英文看久了就会累，后来在知乎上找到了翻译版专栏。推荐几个我的收藏。&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;
+&lt;a href=&quot;http://zhuanlan.zhihu.com/android-weekly&quot;&gt;AndroidWeekly-知乎专栏&lt;/a&gt;  &lt;br /&gt;
+&lt;br /&gt;
+  &lt;a href=&quot;http://zhuanlan.zhihu.com/andlib&quot;&gt;Android科学院&lt;/a&gt;&lt;/p&gt;
+
+    &lt;p&gt;&lt;br /&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;搭建你自己的博客分享&lt;/strong&gt;&lt;/p&gt;
+
+    &lt;p&gt;在开发中你总会碰到好久才能解决的问题，为了避免后来的人掉坑，搭建你的博客来和大家分享吧！&lt;br /&gt;
+  这点你可以参考&lt;a href=&quot;http://tanfujun.cc/%E4%BD%BF%E7%94%A8%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/&quot;&gt;30分钟内拥有一个漂亮的博客教程&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;strong&gt;我的收藏夹&lt;/strong&gt; 最后放一部分我的收藏夹内容&lt;/p&gt;
+    &lt;ol&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.androiddevtools.cn/&quot;&gt;AndroidDevTools&lt;/a&gt; 整理了不少Android开发需要用到的插件，自己看！&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://design.1sters.com/&quot;&gt;Material Design 中文版&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.androidcn.org/&quot;&gt;AndroidCN&lt;/a&gt; 一个朋友做的Android社区&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://blog.jobbole.com/&quot;&gt;伯乐在线&lt;/a&gt;&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.tuicool.com/&quot;&gt;推酷&lt;/a&gt; 排版很不错，内容丰富&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.23code.com/&quot;&gt;23code&lt;/a&gt; 一个不错的源码分享网站，还有App，可以看效果&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://www.94ifeng.com/&quot;&gt;修炼源码&lt;/a&gt; 源码网站&lt;/p&gt;
+      &lt;/li&gt;
+      &lt;li&gt;
+        &lt;p&gt;&lt;a href=&quot;http://boolan.com/gdg&quot;&gt;谷歌开发者中文频道&lt;/a&gt;  有不少谷歌的开发者视频，不用梯子就行&lt;/p&gt;
+      &lt;/li&gt;
+    &lt;/ol&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;高手篇&lt;/h2&gt;
+
+&lt;p&gt;究竟什么是写代码的高手，可能每个人都有自己见解，在这里我其实不知道该写什么东西，我觉得每一个开发者最终的产物都是你的项目，所以你要做的并不是去炫技，而是写出更健壮、更易用的代码。那么我臆测该学的可能有如下：&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;设计模式 （设计模式更像是一种经验的东西，知道和用是不一样的，根据代码能看出这是什么设计模式似乎很容易，但是高手总是能巧妙的运用他们，你看完后发现，好有道理哦！就是写不出来5555 。。。）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;学习架构师方面的知识 （开发小项目看不出来，开发大一点的前期的设计真的很重要啊）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;学习内核相关内容 （有去看过讲内核的沙龙，我就是打酱油的，需要汇编和c，大神讲的理所当然，我是一头雾水，不过深入还是有很多好玩的东西的）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;写写算法 &lt;a href=&quot;http://oj.leetcode.com/&quot;&gt;leetcode&lt;/a&gt; 全A了，有些题其实还有更优解法的，但是我不推荐你做ACM的（大神请无视）基本上都是些数学内容。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;学习设计 不会做设计的程序员不是好的产品经理，我最近在学习使用sketch，其实很好玩的。&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;学习各种新技术，做做小玩意（比如木匠活的什么的，我觉得挺好玩的），你除了是一个做技术的还要提高情商，不然你怎么追妹子啊！&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;锻炼身体 这个真的特别重要！！！&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;其实高手篇就是我写着玩的，大家随意看看就好，拍砖？我其实无所谓的啦！~~&lt;/p&gt;
+
+&lt;h5 id=&quot;section-5&quot;&gt;写在最后&lt;/h5&gt;
+
+&lt;p class=&quot;notice&quot;&gt;整理码字不易，转载请注明&lt;br /&gt;
+欢迎关注我的博客 &lt;a href=&quot;tanfujun.cc&quot;&gt;晓_晨DEV&lt;/a&gt; &lt;br /&gt;
+有任何意见或建议 欢迎讨论&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/&quot;&gt;如果你现在学Android&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on April 24, 2015.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -51,7 +333,7 @@
 &lt;h1 id=&quot;section&quot;&gt;使用技巧&lt;/h1&gt;
 
 &lt;h2 id=&quot;section-1&quot;&gt;快速打开&lt;/h2&gt;
-&lt;p&gt;1.按两下command 可以打开swiftly，进行搜索&lt;br /&gt;
+&lt;p&gt;1.按两下command 可以打开swiftly，进行搜索,(这个是QQ的功能，你要是不挂Q的话用不了)&lt;br /&gt;
 2.ctrl+空格 打开Spotlight，进行搜索&lt;br /&gt;
 (我通常就是这么打开终端，只需要输入ter)&lt;/p&gt;
 
