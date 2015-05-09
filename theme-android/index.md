@@ -15,15 +15,23 @@ image:
 
 ### 从零开始 
 如果你基本上不知道Android开发是什么，那么你可以参考下我写的这篇文章
-
-[如果你现在学Android]()
+<br/><br/>
+[如果你现在学Android](http://tanfujun.cc/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/)  
 
 ---
+
+### Android Studio
+使用Android Studio来进行开发已经是主流了，相信不久eclipse会被完全抛弃的。关于Android Studio的学习内容
+<br/><br/>
+[Why Android Studio?及学习资源整理]()
+
+---
+
 
 ### Gradle学习
 市面上大部分的Android学习教程目前还是Eclipse，但是使用Android Studio是非常必要的，参见
 
-[Why Android Studio?及学习资源整理]()
+
 
 ---
 
