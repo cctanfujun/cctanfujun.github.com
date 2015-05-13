@@ -23,7 +23,7 @@ image:
 ### Android Studio
 使用Android Studio来进行开发已经是主流了，相信不久eclipse会被完全抛弃的。关于Android Studio的学习内容
 <br/><br/>
-[Why Android Studio?及学习资源整理]()
+[Why Android Studio?及学习资源整理](http://tanfujun.cc/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/)
 
 ---
 
@@ -31,6 +31,16 @@ image:
 ### Gradle学习
 市面上大部分的Android学习教程目前还是Eclipse，但是使用Android Studio是非常必要的，参见
 
+<br/><br/>
+[使用Gradle构建Android程序](http://rinvay.github.io/android/2015/04/09/Build-Android-with-Gradle/){:target="_blank"}
+<br/><br/>
+[Gradle插件用户指南(译)](http://rinvay.github.io/android/2015/03/26/Gradle-Plugin-User-Guide(Translation)/){:target="_blank"}
+<br/><br/>
+[stormzhang Android Studio 系列教程](http://www.stormzhang.com/){:target="_blank"}
+<br/><br/>
+[美团Android自动化之旅—生成渠道包](http://tech.meituan.com/mt-apk-packaging.html){:target="_blank"}
+<br/><br/>
+[美团Android自动化之旅—适配渠道包](http://tech.meituan.com/mt-apk-adaptation.html){:target="_blank"}
 
 
 ---
