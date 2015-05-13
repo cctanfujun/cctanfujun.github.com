@@ -4,13 +4,98 @@
 <generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-05-10T07:10:09+08:00</updated>
+<updated>2015-05-13T18:43:09+08:00</updated>
 <id>/</id>
 <author>
   <name>晓_晨DEV</name>
   <uri>/</uri>
   <email>cctanfujun@163.com</email>
 </author>
+
+
+  
+
+<entry>
+  <title type="html"><![CDATA[Why Android Studio? 及Tips]]></title>
+  <link rel="alternate" type="text/html" href="/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/" />
+  <id>/为什么使用Android Studio</id>
+  <updated>2015-05-13T00:00:00-00:00</updated>
+  <published>2015-05-13T00:00:00+08:00</published>
+  
+  <author>
+    <name>晓_晨DEV</name>
+    <uri></uri>
+    <email>cctanfujun@163.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;Android Studio作为Google推荐开发Android使用的IDE，今后成为Android开发的主要工具是毋庸置疑的，从Eclipse过度过来的你要如何使用它呢！&lt;/p&gt;
+
+&lt;h1 id=&quot;android-stuido&quot;&gt;为什么使用Android Stuido&lt;/h1&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;比Eclipse速度更快&lt;/li&gt;
+  &lt;li&gt;可视化编辑UI&lt;/li&gt;
+  &lt;li&gt;Darcula主题&lt;/li&gt;
+  &lt;li&gt;更强大的代码提示&lt;/li&gt;
+  &lt;li&gt;智能保存&lt;/li&gt;
+  &lt;li&gt;内置终端&lt;/li&gt;
+  &lt;li&gt;完善的插件系统&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;section&quot;&gt;开始阶段&lt;/h1&gt;
+
+&lt;p&gt;其实上手一个新的IDE并没有什么复杂的地方，目前也有很多Android Studio的教程，我整理一些，你简单看看就可以上手了。我就总结些你应该注意的地方。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用Eclipse快捷键。我并不是推荐你使用Eclipse的快捷键，而是你如果是从Eclipse过度过来的用户这样会非常容易上手，网上关于Android Studio快捷键部分的教程我认为是没有意义的，你可以自己去定义你的快捷键。&lt;/li&gt;
+  &lt;li&gt;使用Gradle构建项目。这里是Android Studio和Eclipse不同的地方，我认为也是一个非常好用的地方，虽然第一次上手可能稍有困惑，但是如果你简单看看，也是很容易掌握的，文章后面我也会整理一些Gradle学习资源。&lt;/li&gt;
+  &lt;li&gt;Android Studio 插件，虽然Eclipse也有一些插件，感觉仓库的管理不如AS。&lt;/li&gt;
+  &lt;li&gt;第一次使用注意事项：最好连接VPN，因为第一次要下载gradle，虽然你也可以用本地的，但是新手也许并不会设置；设置黑色主题；设置好快捷键；完成你的Hello Android Studio吧！&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;p&gt;&lt;strong&gt;推荐学习文章&lt;/strong&gt;
+  &lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://yanbober.github.io/2015/01/28/android_studio_guide/?bsh_bid=612588611&quot; target=&quot;_blank&quot;&gt;Google利器Android Studio从入门到精通&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;gradle&quot;&gt;Gradle学习&lt;/h1&gt;
+
+&lt;p&gt;Android Studio 使用Gradle来构建项目，那么需要你对Gradle有一些了解
+&lt;br /&gt;&lt;br /&gt;
+&lt;strong&gt;推荐学习文章&lt;/strong&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://rinvay.github.io/android/2015/04/09/Build-Android-with-Gradle/&quot; target=&quot;_blank&quot;&gt;使用Gradle构建Android程序&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://rinvay.github.io/android/2015/03/26/Gradle-Plugin-User-Guide(Translation)/&quot; target=&quot;_blank&quot;&gt;Gradle插件用户指南(译)&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.stormzhang.com/&quot; target=&quot;_blank&quot;&gt;stormzhang Android Studio 系列教程&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://tech.meituan.com/mt-apk-packaging.html&quot; target=&quot;_blank&quot;&gt;美团Android自动化之旅—生成渠道包&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://tech.meituan.com/mt-apk-adaptation.html&quot; target=&quot;_blank&quot;&gt;美团Android自动化之旅—适配渠道包&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h1 id=&quot;android-studio-tips&quot;&gt;Android Studio Tips&lt;/h1&gt;
+
+&lt;p&gt;整理一些好用的Tips&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;使用Genymotion模拟器，Android Studio也有genymotion插件
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;你可以设置logcat颜色，这样调试信息更加显而易见。打开* &lt;code&gt;setting&amp;gt;editor&amp;gt;Color &amp;amp; Fontd&amp;gt;Android Logcat&lt;/code&gt;进行设置.
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;在xml界面里可使用&lt;code&gt;tools&lt;/code&gt;属性来预览
+&lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
+  &lt;li&gt;你可以使用插件来控制你的编码规范&lt;/li&gt;
+&lt;/ul&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/&quot;&gt;Why Android Studio? 及Tips&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on May 13, 2015.&lt;/p&gt;
+  </content>
+</entry>
 
 
   
@@ -381,7 +466,7 @@ Android开源库真的太多了，如果你不是特别闲的话，就去关注�
   <title type="html"><![CDATA[Mac使用小技巧]]></title>
   <link rel="alternate" type="text/html" href="/%E5%AF%B9%E4%BA%8E%E5%BC%80%E5%8F%91%E8%80%85%E5%AE%9E%E7%94%A8%E7%9A%84Mac%E6%8A%80%E5%B7%A7/" />
   <id>/对于开发者实用的Mac技巧</id>
-  <updated>2015-4-21T00:00:00-00:00</updated>
+  <updated>2015-5-12T00:00:00-00:00</updated>
   <published>2015-04-21T00:00:00+08:00</published>
   
   <author>
@@ -451,7 +536,9 @@ shift+command+G               前往某个文件夹
 
 &lt;h1 id=&quot;section-4&quot;&gt;其他推荐&lt;/h1&gt;
 
-&lt;p&gt;&lt;a href=&quot;http://aaaaaashu.gitbooks.io/mac-dev-setup/content/index.html&quot;&gt;Mac开发配置手册&lt;/a&gt;   非常不错的开发配置手册&lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;http://aaaaaashu.gitbooks.io/mac-dev-setup/content/index.html&quot;&gt;Mac开发配置手册&lt;/a&gt;   非常不错的开发配置手册&lt;br /&gt;
+&lt;br /&gt;
+&lt;a href=&quot;&quot;&gt;打造程序员用的终端&lt;/a&gt;   参考Mac开发配置手册，但是里面关于终端配置有些地方很令人费解出现了一些错误，google后自己完成的文章。&lt;/p&gt;
 
 &lt;hr /&gt;
 
@@ -461,6 +548,7 @@ shift+command+G               前往某个文件夹
   &lt;li&gt;听音乐 不用网易云音乐，你的逼格在哪里&lt;/li&gt;
   &lt;li&gt;清理Mac 推荐CleanMyMac&lt;/li&gt;
   &lt;li&gt;MarkDown编写 推荐Mou&lt;/li&gt;
+  &lt;li&gt;终端推荐用iterm2 来代替terminal&lt;/li&gt;
 &lt;/ul&gt;
 
 &lt;hr /&gt;
