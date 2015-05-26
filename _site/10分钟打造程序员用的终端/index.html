@@ -5,16 +5,16 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>我的博客 &#8211; 晓_晨DEV的博客</title>
+<title>打造程序员用的终端 &#8211; 晓_晨DEV的博客</title>
 <meta property="wb:webmaster" content="c54d7cd9867e7171" />
-<meta name="description" content="晓_晨的博客今天起成立了">
-<meta name="keywords" content="sample post, code, highlighting">
+<meta name="description" content="让你的终端更漂亮些吧">
+<meta name="keywords" content="mac">
 
 
 
 <!-- Twitter Cards -->
-<meta name="twitter:title" content="我的博客">
-<meta name="twitter:description" content="晓_晨的博客今天起成立了">
+<meta name="twitter:title" content="打造程序员用的终端">
+<meta name="twitter:description" content="让你的终端更漂亮些吧">
 
 
 
@@ -24,16 +24,16 @@
 <!-- Open Graph -->
 <meta property="og:locale" content="zh_CN">
 <meta property="og:type" content="article">
-<meta property="og:title" content="我的博客">
-<meta property="og:description" content="晓_晨的博客今天起成立了">
-<meta property="og:url" content="/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+<meta property="og:title" content="打造程序员用的终端">
+<meta property="og:description" content="让你的终端更漂亮些吧">
+<meta property="og:url" content="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/">
 <meta property="og:site_name" content="晓_晨DEV的博客">
 
 
 
 
 
-<link rel="canonical" href="/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/">
+<link rel="canonical" href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/">
 <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="晓_晨DEV的博客 Feed">
 
 <!-- http://t.co/dKP3o1e -->
@@ -163,11 +163,66 @@
   <article class="post">
     <div class="headline-wrap">
       
-        <h1><a href="/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" rel="bookmark" title="我的博客">我的博客</a></h1>
+        <h1><a href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/" rel="bookmark" title="打造程序员用的终端">打造程序员用的终端</a></h1>
       
     </div><!--/ .headline-wrap -->
     <div class="article-wrap">
-      <p>请大家鼓掌欢呼！^ ^</p>
+      <p>最近研究了一下iterm2，确实非常好用，能让你的终端更加漂亮，先上一张截图，接下来在10分钟内搞定它。如果你不是重度使用用户，像我这么搞就行了。
+<img src="/images/iterm2.png" alt="iterm2" /></p>
+
+<h2 id="iterm2">安装iterm2</h2>
+
+<p>首先要安装iTerm2 作为一名开发者，我们常常花上很多时间在终端上，如同武士的剑，一出手便知高低。所以让我们安装 Mac上最强大的终端 iTerm2 吧！写码除虫，居家必备。  <br />
+下载地址:<a href="http://iterm2.com/">iterm2</a></p>
+
+<h2 id="zsh">安装ZSH</h2>
+
+<p>我们使用ZSH来代替bash 执行 <br />
+<br /><br />
+<code>brew install zsh zsh-completions</code><br />
+<br /><br />
+用zsh代替bash 执行  <br />
+<br /><br />
+<code>chsh -s /bin/zsh</code></p>
+
+<h2 id="oh-my-zsh">安装oh-my-zsh</h2>
+<p>扩展功能和主题 由oh-my-zsh 提供 <br />
+<br /><br />
+<code>curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh </code></p>
+
+<h2 id="section">添加颜色，更改主题</h2>
+
+<p><strong>颜色</strong>
+<br /><br />
+打开iterm2 
+在 Keys -&gt; Hotkey 中设置 command + option + i 快速显示和隐藏 iterm2
+<br /><br />
+在 Profiles -&gt; Default -&gt; Check silence bell
+<br /><br />
+下载 <a href="https://github.com/altercation/solarized/tree/master/iterm2-colors-solarized">Solarized dark iterm colors</a>，在 Profiles -&gt; Default -&gt; Colors -&gt; Load Presets 将其导入，作为默认颜色。
+<br /><br />
+在 Profiles -&gt; Text 改变游标（cursor）文字和颜色，随个人喜好。  <br />
+<br /><br />
+<strong>主题</strong></p>
+
+<p><br /><br />
+打开<code>.zshrc</code>文件（是个隐藏文件），你可以修改主题，修改这句
+<br /><br />
+<code>ZSH_THEME="pygmalion"</code> (我使用的主题是pygmalion)  <br />
+<br /><br />
+全部主题你可以在<code>.oh-my-zsh/themes</code>文件夹里查看。 <br />
+<br /><br />
+当然你也可以使用random，每次打开是一个随机主题</p>
+
+<h2 id="section-1">使用快捷键</h2>
+
+<p>其实zsh是非常强大的，但是很多功能需要繁琐的配置。 <br />
+<br /><br />
+我主要就使用tab补全，和 <code>command+；</code> 可以补全命令</p>
+
+<p><br /><br />
+就说这么多了，快去实践一下吧~</p>
+
 
       
       
@@ -178,10 +233,10 @@
 <script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["print","qzone","tsina","weixin","tqq","sqq"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
         <!-- 多说评论框 start -->
       
-      <div class="ds-thread" data-thread-key="/我的博客" data-title="我的博客" data-url="//%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/"></div>
+      <div class="ds-thread" data-thread-key="/10分钟打造程序员用的终端" data-title="打造程序员用的终端" data-url="//10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/"></div>
       <!-- 多说评论框 end -->
       
-        <p class="byline"><strong>我的博客</strong> 发表于 <time datetime="2015-04-17T00:00:00+08:00">2015-04-17</time> 最后修改于 <time datetime="2015-04-17">2015-04-17</time>.</p>
+        <p class="byline"><strong>打造程序员用的终端</strong> 发表于 <time datetime="2015-05-26T00:00:00+08:00">2015-05-26</time> 最后修改于 <time datetime="2015-04-20">2015-04-20</time>.</p>
       </footer>
     </div><!-- /.article-wrap -->
    </article>
@@ -195,11 +250,11 @@
   <h4>你可能还喜欢 <small class="pull-right">(<a href="/posts/">查看全部文章</a>)</small></h4>
     <ul>
     
-      <li><a href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/" title="打造程序员用的终端">打造程序员用的终端</a></li>
-    
       <li><a href="/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/" title="Why Android Studio? 及Tips">Why Android Studio? 及Tips</a></li>
     
       <li><a href="/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/" title="如果你现在学Android">如果你现在学Android</a></li>
+    
+      <li><a href="/%E6%97%A0%E7%BA%BF%E8%B0%83%E8%AF%95%E4%BD%A0%E7%9A%84Android%E8%AE%BE%E5%A4%87/" title="无线调试你的Android设备">无线调试你的Android设备</a></li>
     
     </ul>
     <hr />
