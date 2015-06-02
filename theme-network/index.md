@@ -33,6 +33,12 @@ image:
 
 ---
 
+1. [单例模式](http://www.importnew.com/15524.html)
+
+2. [工厂方法模式](http://www.importnew.com/15530.html)
+
+
+
 # Git学习
 
 ---
