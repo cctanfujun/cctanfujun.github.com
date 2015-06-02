@@ -33,13 +33,16 @@ image:
 
 ---
 
-1. [单例模式](http://www.importnew.com/15524.html)
+* [**史上最全设计模式导学目录（完整版）**](http://blog.csdn.net/lovelion/article/details/17517213) 非常不错的设计模式学习教程
 
-2. [工厂方法模式](http://www.importnew.com/15530.html)
+* [**卡奴达摩的专栏**](http://blog.csdn.net/zhengzhb/article/category/926691/) 没有更新完成，02年停更了，文章比较浅显易懂
 
+
+---
 
 
 # Git学习
+* [Git速查表]({{site.url}}/Git速查表)
 
 ---
 
@@ -49,8 +52,8 @@ image:
 ---
 
 # 其他  
-
-
+* [HTTP 接口设计指北
+](https://github.com/bolasblack/http-api-guide)
 
 
 
