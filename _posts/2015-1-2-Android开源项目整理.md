@@ -11,5 +11,5 @@ image:
 <br/><br/>
 [FlyRefresh：超赞的刷新动画](https://github.com/race604/FlyRefresh)  
 <figure class="third">
-    <img src="https://raw.githubusercontent.com/race604/FlyRefresh/master/images/flyrefresh.gif">    
+    <img src="http://ww2.sinaimg.cn/bmiddle/a19d4f8dgw1esl0jrlsbbg20g00sg7wh.gif">    
 </figure>
