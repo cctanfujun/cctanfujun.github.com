@@ -36,6 +36,8 @@ image:
 
 * [**卡奴达摩的专栏**](http://blog.csdn.net/zhengzhb/article/category/926691/) 没有更新完成，02年停更了，文章比较浅显易懂
 
+* [**图说设计模式**](图说设计模式 "http://design-patterns.readthedocs.org/zh_CN/latest/index.html") 挺不错的一本书 
+
 
 ---
 

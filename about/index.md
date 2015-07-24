@@ -26,3 +26,8 @@ image:
 
 * 2015-2 开通微信公众号“晓晨Android组“ `微信：xiaochenAndroid`，期间除了在公司实习写了几篇文章，仅仅在eoe写了两篇帖子，2月有400+关注，后期会继续运营的
 
+---
+### 推荐你关注 
+
+[kymjs张涛](kymjs张涛 "http://kymjs.com/") kym框架作者的博客
+
