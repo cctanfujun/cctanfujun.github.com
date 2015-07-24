@@ -47,7 +47,14 @@ image:
 
 ### Android工具
  
-整理一些实用的工具技巧
+整理一些实用的工具技巧  
+
+* 生成各种分辨率的图标或者简易图标：[http://jgilfelt.github.io/AndroidAssetStudio/](http://jgilfelt.github.io/AndroidAssetStudio/ "http://jgilfelt.github.io/AndroidAssetStudio/")  
+
+* 一个新的逆向工具，用于替代dex2jar
+官方出品
+Enjarify is designed to work in as many cases as possible, even for code where Dex2jar would fail:[https://github.com/google/enjarify](https://github.com/google/enjarify "https://github.com/google/enjarify")
+
 
 ---
 
@@ -60,7 +67,56 @@ image:
 ---
 
 ### Sky学习
-Google发布了开源的sky项目，使用Dart语言来编写Android程序，在目前Android程序运行保证60fps都困难的情况下，提出要以120fps运行Android程序，这是非常有诱惑力的，不管Sky日后是否会成为主流，来学习一下总是没有坏处的，这部分我会写或者整理一些Dart的学习资源。
+Google发布了开源的sky项目，使用Dart语言来编写Android程序，在目前Android程序运行保证60fps都困难的情况下，提出要以120fps运行Android程序，这是非常有诱惑力的，不管Sky日后是否会成为主流，来学习一下总是没有坏处的，这部分我会写或者整理一些Dart的学习资源。  
+
+* Dart官方网站：[https://www.dartlang.org/](https://www.dartlang.org/ "https://www.dartlang.org/")  
+
+* Sky SDK地址：[https://github.com/domokit/sky_engine](https://github.com/domokit/sky_engine "https://github.com/domokit/sky_engine")
+
+
+
+
+---
+### Kotlin学习
+
+JetBrain出品的一门静态语言，使用它进行Android开发非常火爆  
+
+* Kotlin官方网站：[http://kotlinlang.org/#get-kotlin](http://kotlinlang.org/#get-kotlin)
+
+---
+
+### RxJava
+
+函数响应式编程库  
+
+* RxJava地址：[https://github.com/ReactiveX/RxJava](https://github.com/ReactiveX/RxJava "https://github.com/ReactiveX/RxJava")
+* RxAndroid地址：[https://github.com/ReactiveX/RxAndroid](https://github.com/ReactiveX/RxAndroid "https://github.com/ReactiveX/RxAndroid")
+
+
+---
+
+### Retrofit
+
+良心公司Square出品的网络请求库  
+
+* 官网地址：[http://square.github.io/retrofit/](http://square.github.io/retrofit/ "http://square.github.io/retrofit/") 
+
+---
+
+### MVVM 和 MVP
+
+晓晨看了两天Android TV的开发，发现在Android TV中主要使用了MVP的模式，但是Android随后推出的Data Binding，又有人说会让MVVM更加流行，这两种模式很接近，但是细微区别我又说不好，还要好好学习。
+
+---
+
+### LeakCandry 
+
+用于检测内存泄露，比MAT更加易用
+  
+官网地址：[https://corner.squareup.com/2015/05/leak-canary.html](https://corner.squareup.com/2015/05/leak-canary.html "https://corner.squareup.com/2015/05/leak-canary.html")
+
+---
+
 
 
 
