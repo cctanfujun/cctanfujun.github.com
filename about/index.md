@@ -30,5 +30,5 @@ image:
 
 ### 推荐你关注 
 
-[kymjs张涛](kymjs张涛 "http://kymjs.com/")    KJFrameForAndroid 和 KJPush 框架作者的博客
+[kymjs张涛](http://kymjs.com/)    KJFrameForAndroid 和 KJPush 框架作者的博客
 
