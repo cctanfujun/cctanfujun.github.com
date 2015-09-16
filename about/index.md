@@ -30,6 +30,17 @@ image:
 * 2015-2 开通微信公众号“晓晨Android组“ `微信：xiaochenAndroid`，期间除了在公司实习写了几篇文章，仅仅在eoe写了两篇帖子，2月有400+关注，后期会继续运营的
 
 
+### 我的设备
+
+* 一台MacBookPro 13寸
+* DELL XPS15
+* iPhone 5s
+* iPad Air2
+* 烈焰枪 机械键盘 茶轴
+* Noppoo 75s 红轴
+* Leap Motion
+* 很多Android机
+
 ---
 
 ### 推荐你关注 
