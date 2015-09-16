@@ -14,17 +14,21 @@ image:
 ### 我喜欢的技术想做的事:
 
 * Android develop
-* iOS develop
-* 世界那么大，我想见到更多的人
+* 世界那么大，我想让自己的视野渐渐开阔
 * 一个人拥有此生此世是远远不够的，他还应该拥有诗意的世界 
 
 ### 重要的事情：
 
 #### 我相信这里的内容会慢慢多起来的 
 
+* 2015-8-8 开始组建Kotlin学习小组翻译Kotlin官方文档，并搭建中文站 [http://tanfujun.cc/kotlin-web-site-cn/](http://tanfujun.cc/kotlin-web-site-cn/)
+
+* 2015-7-1 入职魅族
+
 * 2015-4-18 在github开通博客，也即将毕业走向工作
 
 * 2015-2 开通微信公众号“晓晨Android组“ `微信：xiaochenAndroid`，期间除了在公司实习写了几篇文章，仅仅在eoe写了两篇帖子，2月有400+关注，后期会继续运营的
+
 
 ---
 
