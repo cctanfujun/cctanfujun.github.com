@@ -2,11 +2,12 @@
 layout: post
 title: React Native快速初始化
 excerpt: “ReactNative快速初始化教程”
-tags: [study， post, code, highlighting]
+category: [Android]
+tags: [Android,iOS]
 modified: 2016-1-20
 comments: true
 ---
-{% include _toc.html %}
+
 
 按照本操作流程可以快速初始化RN项目。
 

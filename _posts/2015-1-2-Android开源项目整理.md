@@ -2,6 +2,8 @@
 layout: page
 title: Android开源项目整理
 modified: 2016-06-02T13:23:02.362000-04:00
+categories: [Android]
+tag: [Android]
 excerpt: "整理流行和好玩的开源Android项目"
 image:
   feature: sample-image-3.jpg

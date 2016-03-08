@@ -1,10 +1,10 @@
-<?xml version="1.0" encoding="utf-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom" xml:lang="en">
-<title type="text">晓_晨DEV的博客</title>
-<generator uri="https://github.com/jekyll/jekyll">Jekyll</generator>
+<title type="text">晓_晨DEV</title>
+<generator uri="https://github.com/mojombo/jekyll">Jekyll</generator>
 <link rel="self" type="application/atom+xml" href="/feed.xml" />
 <link rel="alternate" type="text/html" href="" />
-<updated>2015-11-05T14:16:21+08:00</updated>
+<updated>2016-03-08T01:23:28-05:00</updated>
 <id>/</id>
 <author>
   <name>晓_晨DEV</name>
@@ -13,14 +13,207 @@
 </author>
 
 
+<entry>
+  <title type="html"><![CDATA[APP研发录读后感]]></title>
+ <link rel="alternate" type="text/html" href="/android/APP%E7%A0%94%E5%8F%91%E5%BD%95%E8%AF%BB%E5%90%8E%E6%84%9F/" />
+  <id>/android/APP研发录读后感</id>
+  <updated>2016-03-07T00:00:00-00:00</updated>
+  <published>2016-03-07T00:00:00-05:00</published>
   
+  <author>
+    <name>晓_晨DEV</name>
+    <uri></uri>
+    <email>cctanfujun@163.com</email>
+  </author>
+  <content type="html">
+    &lt;h2 id=&quot;section&quot;&gt;第一章 重构&lt;/h2&gt;
+
+&lt;p&gt;1.拆分Activity 生命周期 onCreate（） -&amp;gt; initVariables()初始化变量、initViews（）加载布局文件、loadData（）。在BaseActivity声明为抽象方法。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-1&quot;&gt;第二章 网络框架设计&lt;/h2&gt;
+
+&lt;p&gt;1.Get请求数据 Post修改数据。&lt;/p&gt;
+
+&lt;p&gt;2.定义Response实体类作为所有JSON数据最外层。包括isError、errorType、errorMessage、result。&lt;/p&gt;
+
+&lt;p&gt;3.网络请求失败可以在上层封装一个 统一的处理 如弹出dialog。&lt;/p&gt;
+
+&lt;p&gt;4.网络请求要设计缓存功能也要设计强制更新功能。&lt;/p&gt;
+
+&lt;p&gt;5.设计MockService功能，返回假数据在服务器没开发完成时候，不会影响客户端开发。&lt;/p&gt;
+
+&lt;p&gt;6.统一处理cookie过期。&lt;/p&gt;
+
+&lt;p&gt;7.http有必要情况下可以开启gzip压缩。&lt;/p&gt;
+
+&lt;h2 id=&quot;android&quot;&gt;第三章 Android经典场景的设计&lt;/h2&gt;
+
+&lt;p&gt;1.post请求不建议有重试机制（服务器有防重机制除外）&lt;/p&gt;
+
+&lt;p&gt;2.尽量保证下载的图片符合imageView大小。请求url加上宽高参数&lt;/p&gt;
+
+&lt;p&gt;3.低流量模式，url加上quality参数 在2g 3g网络下返回低质量图片&lt;/p&gt;
+
+&lt;p&gt;4.对于一些会变化的数据，也要加上版本号，可以做增量更新。&lt;/p&gt;
+
+&lt;p&gt;5.某些页面可以控制可以显示Html5页面，开关由服务器控制。&lt;/p&gt;
+
+&lt;p&gt;6.内存不足时候全局变量可能被回收，尽量少使用全局变量。&lt;/p&gt;
+
+&lt;h2 id=&quot;section-2&quot;&gt;第四章 命名规格和编码规范&lt;/h2&gt;
+
+&lt;p&gt;1.控件声明为全局变量比较好。&lt;/p&gt;
+
+&lt;p&gt;2.在dimen定义字体大小 可以定义tiny small normal normal_high large等等。&lt;/p&gt;
+
+&lt;h2 id=&quot;crash&quot;&gt;第五章 Crash异常收集与统计&lt;/h2&gt;
+
+&lt;p&gt;1.Crash发送到服务器，给用户友好的提示，把错误记录到Sd卡&lt;/p&gt;
+
+&lt;p&gt;2.使用第三方服务帮助分析&lt;/p&gt;
+
+&lt;h2 id=&quot;crash-1&quot;&gt;第六章 Crash异常分析&lt;/h2&gt;
+
+&lt;h2 id=&quot;proguard&quot;&gt;第七章 ProGuard技术详解&lt;/h2&gt;
+
+&lt;h2 id=&quot;section-3&quot;&gt;第八章 持续集成&lt;/h2&gt;
+
+&lt;h2 id=&quot;app&quot;&gt;第九章 App竞品分析&lt;/h2&gt;
+
+&lt;p&gt;1.App结构&lt;/p&gt;
+
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt; |—— resources.arscz apk文件资源索引表
+
+ |—— lib目录下arneabi存放so文件
+
+ |—— META-INF存放签名信息（这个目录下文件不会被签名）
+
+ |—— assets 本地数据（本地Html css 等）
+
+ |—— res资源目录（anim下是动画）
+&lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
+
+&lt;p&gt;2.加密的xml可用AXMLPrinter2.jar 还原&lt;/p&gt;
+
+&lt;p&gt;3.App展示页一般操作（友盟打点统计激活数、注册推送、准备跳转页面、初始化崩溃收集机制或发送需要发送的崩溃）&lt;/p&gt;
+
+&lt;p&gt;4.加快Html5打开速度，本地存放Zip包，Zip包有增量更新机制。&lt;/p&gt;
+
+&lt;p&gt;5.建议内部图片使用png格式、网络下载图片使用jpg格式 大尺寸图片使用jpg格式&lt;/p&gt;
+
+&lt;p&gt;6.自动选取最佳服务器&lt;/p&gt;
+
+&lt;p&gt;7.考虑Tcp+protobuf 替换Http+Json&lt;/p&gt;
+
+&lt;p&gt;8.打点使用第三方工具&lt;/p&gt;
+
+&lt;p&gt;9.对于劫持的应对（公钥私钥解决）&lt;/p&gt;
+
+&lt;p&gt;10.xml配置默认数据 防止加载不出数据时候无入口显示&lt;/p&gt;
+
+&lt;p&gt;11.App后门 （调试工具等）&lt;/p&gt;
+
+&lt;p&gt;12.Dex分包&lt;/p&gt;
+
+&lt;p&gt;13.Countly开源的移动应用统计分析平台&lt;/p&gt;
+
+&lt;p&gt;14.版本号策略（第二位用于递增 第三位用于紧急发版）（其他策略也可）&lt;/p&gt;
+
+&lt;p&gt;15.Zip包可以加密码&lt;/p&gt;
+
+&lt;h2 id=&quot;section-4&quot;&gt;第十章 项目管理决定开发进度&lt;/h2&gt;
+
+&lt;p&gt;1.产品经理自己要想明白要做什么。&lt;/p&gt;
+
+&lt;p&gt;2.让html5 提前app一个迭代，保证mobileapi正常&lt;/p&gt;
+
+&lt;p&gt;3.有些页面为了保证Monkey可以跑入，可以在程序中设置isMonkey变量。&lt;/p&gt;
+
+&lt;p&gt;4.团队Quiet Time提升效率。&lt;/p&gt;
+
+    &lt;p&gt;&lt;a href=&quot;/android/APP%E7%A0%94%E5%8F%91%E5%BD%95%E8%AF%BB%E5%90%8E%E6%84%9F/&quot;&gt;APP研发录读后感&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on March 07, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
+
+<entry>
+  <title type="html"><![CDATA[React Native快速初始化]]></title>
+ <link rel="alternate" type="text/html" href="/android/React-Native%E5%BF%AB%E9%80%9F%E5%88%9D%E5%A7%8B%E5%8C%96/" />
+  <id>/android/React Native快速初始化</id>
+  <updated>2016-1-20T00:00:00-00:00</updated>
+  <published>2016-01-20T00:00:00-05:00</published>
+  
+  <author>
+    <name>晓_晨DEV</name>
+    <uri></uri>
+    <email>cctanfujun@163.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;按照本操作流程可以快速初始化RN项目。&lt;/p&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;科学上网&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;brew install nvm&lt;/code&gt;   安装nvm（homebrew自己装,update一下homebrew）&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;nvm install node &amp;amp;&amp;amp; nvm alias default node &lt;/code&gt; (注意brew装的node的default版本可能和淘宝镜像不一致，自己nvm切换)&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm cache clean&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm config set registry=http://registry.npm.taobao.org/&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;创建脚本文件 RN.sh（如下）&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nt&quot;&gt;NODE_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;=&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;node&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-v&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;|&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;cut&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-d&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&#39;&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-f&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;2&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;`&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;wget&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;http&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;://&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;npm&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.taobao.org&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;mirrors&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;node&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;v&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;NODE_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;node-v&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;NODE_VERSION&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.tar.gz&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;rm&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-rf&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.node-gyp&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;mkdir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.node-gyp&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;tar&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;zxf&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;node-v&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;NODE_VERSION&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.tar.gz&lt;/span&gt; &lt;span class=&quot;nt&quot;&gt;-C&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.node-gyp&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;mv&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.node-gyp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;node-v&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;NODE_VERSION&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.node-gyp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;NODE_VERSION&lt;/span&gt;
+
+&lt;span class=&quot;nt&quot;&gt;printf&lt;/span&gt; &lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;9&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;\&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;n&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;&amp;gt;~/&lt;/span&gt;&lt;span class=&quot;nc&quot;&gt;.node-gyp&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;$&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;NODE_VERSION&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;/&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;installVersion&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;ol&gt;
+  &lt;li&gt;
+    &lt;p&gt;执行RN.sh&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;初始化项目 &lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g react-native-cli&lt;/code&gt;   &lt;code class=&quot;highlighter-rouge&quot;&gt;react-native init AwesomeProject&lt;/code&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ol&gt;
+
+&lt;p&gt;Tips:我在安装的时候发现brew的node版本高于淘宝镜像版本 自己手动切换的node版本。（可以用n切换也可以用nvm切换，）&lt;/p&gt;
+
+&lt;p&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;npm install -g n&lt;/code&gt;  &lt;code class=&quot;highlighter-rouge&quot;&gt;n v5.4.0&lt;/code&gt;&lt;/p&gt;
+
+&lt;p&gt;维持翻墙状态2分钟初始完成&lt;/p&gt;
+
+&lt;p&gt;（总体思路就是自己下载node-gyp源码, 就酱紫）&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/android/React-Native%E5%BF%AB%E9%80%9F%E5%88%9D%E5%A7%8B%E5%8C%96/&quot;&gt;React Native快速初始化&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on January 20, 2016.&lt;/p&gt;
+  </content>
+</entry>
+
 
 <entry>
   <title type="html"><![CDATA[Git速查表]]></title>
-  <link rel="alternate" type="text/html" href="/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/" />
+ <link rel="alternate" type="text/html" href="/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/" />
   <id>/Git速查表</id>
   <updated>2015-06-2T00:00:00-00:00</updated>
-  <published>2015-06-02T00:00:00+08:00</published>
+  <published>2015-06-02T00:00:00-04:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -37,19 +230,17 @@
 
 &lt;p&gt;&lt;img src=&quot;/images/Git cheat sheet.jpg&quot; alt=&quot;Git1&quot; /&gt;&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/&quot;&gt;Git速查表&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on June 02, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/&quot;&gt;Git速查表&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on June 02, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
-  
-
 <entry>
   <title type="html"><![CDATA[打造程序员用的终端]]></title>
-  <link rel="alternate" type="text/html" href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/" />
+ <link rel="alternate" type="text/html" href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/" />
   <id>/10分钟打造程序员用的终端</id>
   <updated>2015-04-20T00:00:00-00:00</updated>
-  <published>2015-05-26T00:00:00+08:00</published>
+  <published>2015-05-26T00:00:00-04:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -69,16 +260,16 @@
 
 &lt;p&gt;我们使用ZSH来代替bash 执行 &lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
-&lt;code&gt;brew install zsh zsh-completions&lt;/code&gt;&lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;brew install zsh zsh-completions&lt;/code&gt;&lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
 用zsh代替bash 执行  &lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
-&lt;code&gt;chsh -s /bin/zsh&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;chsh -s /bin/zsh&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;oh-my-zsh&quot;&gt;安装oh-my-zsh&lt;/h2&gt;
 &lt;p&gt;扩展功能和主题 由oh-my-zsh 提供 &lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
-&lt;code&gt;curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh &lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;curl -L https://github.com/robbyrussell/oh-my-zsh/raw/master/tools/install.sh &lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section&quot;&gt;添加颜色，更改主题&lt;/h2&gt;
 
@@ -96,11 +287,11 @@
 &lt;strong&gt;主题&lt;/strong&gt;&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
-打开&lt;code&gt;.zshrc&lt;/code&gt;文件（是个隐藏文件），你可以修改主题，修改这句
+打开&lt;code class=&quot;highlighter-rouge&quot;&gt;.zshrc&lt;/code&gt;文件（是个隐藏文件），你可以修改主题，修改这句
 &lt;br /&gt;&lt;br /&gt;
-&lt;code&gt;ZSH_THEME=&quot;pygmalion&quot;&lt;/code&gt; (我使用的主题是pygmalion)  &lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;ZSH_THEME=&quot;pygmalion&quot;&lt;/code&gt; (我使用的主题是pygmalion)  &lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
-全部主题你可以在&lt;code&gt;.oh-my-zsh/themes&lt;/code&gt;文件夹里查看。 &lt;br /&gt;
+全部主题你可以在&lt;code class=&quot;highlighter-rouge&quot;&gt;.oh-my-zsh/themes&lt;/code&gt;文件夹里查看。 &lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
 当然你也可以使用random，每次打开是一个随机主题&lt;/p&gt;
 
@@ -108,25 +299,23 @@
 
 &lt;p&gt;其实zsh是非常强大的，但是很多功能需要繁琐的配置。 &lt;br /&gt;
 &lt;br /&gt;&lt;br /&gt;
-我主要就使用tab补全，和 &lt;code&gt;command+；&lt;/code&gt; 可以补全命令&lt;/p&gt;
+我主要就使用tab补全，和 &lt;code class=&quot;highlighter-rouge&quot;&gt;command+；&lt;/code&gt; 可以补全命令&lt;/p&gt;
 
 &lt;p&gt;&lt;br /&gt;&lt;br /&gt;
 就说这么多了，快去实践一下吧~&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/&quot;&gt;打造程序员用的终端&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on May 26, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/&quot;&gt;打造程序员用的终端&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on May 26, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
-  
-
 <entry>
   <title type="html"><![CDATA[Why Android Studio? 及Tips]]></title>
-  <link rel="alternate" type="text/html" href="/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/" />
-  <id>/为什么使用Android Studio</id>
+ <link rel="alternate" type="text/html" href="/android/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android-Studio/" />
+  <id>/android/为什么使用Android Studio</id>
   <updated>2015-05-13T00:00:00-00:00</updated>
-  <published>2015-05-13T00:00:00+08:00</published>
+  <published>2015-05-13T00:00:00-04:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -192,26 +381,24 @@
 &lt;ul&gt;
   &lt;li&gt;使用Genymotion模拟器，Android Studio也有genymotion插件
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;你可以设置logcat颜色，这样调试信息更加显而易见。打开* &lt;code&gt;setting&amp;gt;editor&amp;gt;Color &amp;amp; Fontd&amp;gt;Android Logcat&lt;/code&gt;进行设置.
+  &lt;li&gt;你可以设置logcat颜色，这样调试信息更加显而易见。打开* &lt;code class=&quot;highlighter-rouge&quot;&gt;setting&amp;gt;editor&amp;gt;Color &amp;amp; Fontd&amp;gt;Android Logcat&lt;/code&gt;进行设置.
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
-  &lt;li&gt;在xml界面里可使用&lt;code&gt;tools&lt;/code&gt;属性来预览
+  &lt;li&gt;在xml界面里可使用&lt;code class=&quot;highlighter-rouge&quot;&gt;tools&lt;/code&gt;属性来预览
 &lt;br /&gt;&lt;br /&gt;&lt;/li&gt;
   &lt;li&gt;你可以使用插件来控制你的编码规范&lt;/li&gt;
 &lt;/ul&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/&quot;&gt;Why Android Studio? 及Tips&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on May 13, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/android/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android-Studio/&quot;&gt;Why Android Studio? 及Tips&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on May 13, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
-  
-
 <entry>
   <title type="html"><![CDATA[如果你现在学Android]]></title>
-  <link rel="alternate" type="text/html" href="/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/" />
-  <id>/如果你现在学Android</id>
+ <link rel="alternate" type="text/html" href="/android/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/" />
+  <id>/android/如果你现在学Android</id>
   <updated>2015-05-08T00:00:00-00:00</updated>
-  <published>2015-05-08T00:00:00+08:00</published>
+  <published>2015-05-08T00:00:00-04:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -219,29 +406,7 @@
     <email>cctanfujun@163.com</email>
   </author>
   <content type="html">
-    &lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
-  &lt;header&gt;
-    &lt;h3&gt;&lt;i class=&quot;fa fa-book&quot;&gt;&lt;/i&gt; Overview&lt;/h3&gt;
-  &lt;/header&gt;
-&lt;div id=&quot;drawer&quot;&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;工欲善其事，必先利其器&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;学习路线&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;入门级&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;进阶篇&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;高手篇&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;写在最后&lt;/a&gt;&lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;/div&gt;
-&lt;/section&gt;
-&lt;!-- /#table-of-contents --&gt;
-
-&lt;p&gt;虽然现在网上有不少Android的教程，不过现在Android的发展已经到了5.1，很多之前的开发教程和学习建议已经不是很适用，决定以自己的见解写一篇Android学习的教程，如果大家有什么好的意见或建可以评论给我。&lt;/p&gt;
+    &lt;p&gt;虽然现在网上有不少Android的教程，不过现在Android的发展已经到了5.1，很多之前的开发教程和学习建议已经不是很适用，决定以自己的见解写一篇Android学习的教程，如果大家有什么好的意见或建可以评论给我。&lt;/p&gt;
 
 &lt;h1 id=&quot;section&quot;&gt;工欲善其事，必先利其器&lt;/h1&gt;
 &lt;p&gt;虽然Android开发的门槛比较低，但是有件得心应手的兵器还是很有必要的。&lt;/p&gt;
@@ -282,7 +447,7 @@
   &lt;li&gt;
     &lt;p&gt;&lt;strong&gt;学习视频&lt;/strong&gt; 其实我是很喜欢对着视频学习的，再用播放器调整为2-3倍速度播放，其实视频学习有利有弊吧，利就是你在学习一个知识点的时候，也附带学习了讲课者的思维方式，以及其他一些小知识点你也可能注意到（比如一些好用的插件，软件等）弊可能就是视频良莠不齐，开发方面的视频我并不认为存在什么经典，随着时间的流逝和技术的发展反而不再适用，盲目学习事倍功半。&lt;/p&gt;
 
-    &lt;p&gt;这里插入一个小广告吧，下载视频的话，可以关注我的微信公众平台晓晨学习组&lt;code&gt;（微信号：xiaochenAndroid）&lt;/code&gt;，在里面你能找到学习视频下载，都是我认为不错的学习资源。然后我想说的是视频教程，重要的是理解思想，写代码要关了视频敲一遍，照着写实现了也没有什么提高。&lt;/p&gt;
+    &lt;p&gt;这里插入一个小广告吧，下载视频的话，可以关注我的微信公众平台晓晨学习组&lt;code class=&quot;highlighter-rouge&quot;&gt;（微信号：xiaochenAndroid）&lt;/code&gt;，在里面你能找到学习视频下载，都是我认为不错的学习资源。然后我想说的是视频教程，重要的是理解思想，写代码要关了视频敲一遍，照着写实现了也没有什么提高。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;遇到问题能Google少百度，可以到eoe找找，&lt;a href=&quot;stackoverflow&quot;&gt;stackoverflow&lt;/a&gt;，而且要多查查看看，注意文章日期，因为有些问题其实已经有了更好的解决方法，我举个例子，比如要在Android上实现下拉刷新，百度得到的内容基本都是使用pull-to-refresh这个第三方库，但是在Android官方提供的Support包里其实已经带了实现下拉刷新的快捷方法，而且效果更好。&lt;/p&gt;
@@ -486,19 +651,99 @@ Android开源库真的太多了，如果你不是特别闲的话，就去关注�
 有任何意见或建议 欢迎讨论&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/&quot;&gt;如果你现在学Android&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on May 08, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/android/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/&quot;&gt;如果你现在学Android&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on May 08, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
+<entry>
+  <title type="html"><![CDATA[编程学习资源]]></title>
+ <link rel="alternate" type="text/html" href="/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/" />
+  <id>/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/编程学习资源整理</id>
+  <updated>2015-05-07 13:23:02 -0400T00:00:00-00:00</updated>
+  <published>2015-05-07T00:00:00-04:00</published>
   
+  <author>
+    <name>晓_晨DEV</name>
+    <uri></uri>
+    <email>cctanfujun@163.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;这里我会整理一些开发学习相关的资料，杂七杂八的都在这里了，相当于资源分类整理了。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;设计模式&lt;/h3&gt;
+
+&lt;h4 id=&quot;section-1&quot;&gt;设计模式6大原则&lt;/h4&gt;
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.importnew.com/15497.html&quot; target=&quot;_blank&quot;&gt;设计模式六大原则（1）：单一职责原则&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.importnew.com/15500.html&quot; target=&quot;_blank&quot;&gt;设计模式六大原则（2）：里氏替换原则&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.importnew.com/15502.html&quot; target=&quot;_blank&quot;&gt;设计模式六大原则（3）：依赖倒置原则&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.importnew.com/15510.html&quot; target=&quot;_blank&quot;&gt;设计模式六大原则（4）：接口隔离原则&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.importnew.com/15518.html&quot; target=&quot;_blank&quot;&gt;设计模式六大原则（5）：迪米特法则&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://www.importnew.com/15520.html&quot; target=&quot;_blank&quot;&gt;设计模式六大原则（6）：开闭原则&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;h4 id=&quot;section-2&quot;&gt;23种设计模式&lt;/h4&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/lovelion/article/details/17517213&quot;&gt;&lt;strong&gt;史上最全设计模式导学目录（完整版）&lt;/strong&gt;&lt;/a&gt; 非常不错的设计模式学习教程&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;http://blog.csdn.net/zhengzhb/article/category/926691/&quot;&gt;&lt;strong&gt;卡奴达摩的专栏&lt;/strong&gt;&lt;/a&gt; 没有更新完成，02年停更了，文章比较浅显易懂&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;&lt;a href=&quot;图说设计模式&quot; title=&quot;http://design-patterns.readthedocs.org/zh_CN/latest/index.html&quot;&gt;&lt;strong&gt;图说设计模式&lt;/strong&gt;&lt;/a&gt; 挺不错的一本书&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;git&quot;&gt;Git学习&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;/Git速查表&quot;&gt;Git速查表&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;sketch&quot;&gt;Sketch学习资源&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;python&quot;&gt;Python学习资源&lt;/h3&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;section-3&quot;&gt;其他&lt;/h3&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;a href=&quot;https://github.com/bolasblack/http-api-guide&quot;&gt;HTTP 接口设计指北
+&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0/%E7%BC%96%E7%A8%8B%E5%AD%A6%E4%B9%A0%E8%B5%84%E6%BA%90%E6%95%B4%E7%90%86/&quot;&gt;编程学习资源&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on May 07, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
 
 <entry>
   <title type="html"><![CDATA[无线调试你的Android设备]]></title>
-  <link rel="alternate" type="text/html" href="/%E6%97%A0%E7%BA%BF%E8%B0%83%E8%AF%95%E4%BD%A0%E7%9A%84Android%E8%AE%BE%E5%A4%87/" />
-  <id>/无线调试你的Android设备</id>
+ <link rel="alternate" type="text/html" href="/android/%E6%97%A0%E7%BA%BF%E8%B0%83%E8%AF%95%E4%BD%A0%E7%9A%84Android%E8%AE%BE%E5%A4%87/" />
+  <id>/android/无线调试你的Android设备</id>
   <updated>2015-05-07T00:00:00-00:00</updated>
-  <published>2015-05-07T00:00:00+08:00</published>
+  <published>2015-05-07T00:00:00-04:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -514,20 +759,20 @@ Android开源库真的太多了，如果你不是特别闲的话，就去关注�
 
 &lt;ol&gt;
   &lt;li&gt;
-    &lt;p&gt;找到android sdk的本地路径，adb命令在platform-tool下面,记为XXXX，我的路径是(/Applications/eclipse/android-sdk-mac_x86/platform-tools),这里你只需要找到SDK文件夹进入找到adb，按&lt;code&gt;command+i&lt;/code&gt;可以先显示简介，在通用里面的位置，复制到终端就是文件路径。&lt;/p&gt;
+    &lt;p&gt;找到android sdk的本地路径，adb命令在platform-tool下面,记为XXXX，我的路径是(/Applications/eclipse/android-sdk-mac_x86/platform-tools),这里你只需要找到SDK文件夹进入找到adb，按&lt;code class=&quot;highlighter-rouge&quot;&gt;command+i&lt;/code&gt;可以先显示简介，在通用里面的位置，复制到终端就是文件路径。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;打开终端输入&lt;br /&gt;
-&lt;code&gt;touch .bash_profile&lt;/code&gt; &lt;br /&gt;
-&lt;code&gt;open -e .bash_profile&lt;/code&gt;  点回车&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;touch .bash_profile&lt;/code&gt; &lt;br /&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;open -e .bash_profile&lt;/code&gt;  点回车&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;添加路径 &lt;br /&gt;
-.bash_profile打开了，我们在这里添加路径，如果打开的文档里面已经有内容,我们只要之后添加;XXXX(注意前面一定要用分号隔开)，如果是一个空白文档的话，我们就输入一下内容&lt;code&gt;export PATH=${PATH}:XXXX&lt;/code&gt;&lt;br /&gt;
+.bash_profile打开了，我们在这里添加路径，如果打开的文档里面已经有内容,我们只要之后添加;XXXX(注意前面一定要用分号隔开)，如果是一个空白文档的话，我们就输入一下内容&lt;code class=&quot;highlighter-rouge&quot;&gt;export PATH=${PATH}:XXXX&lt;/code&gt;&lt;br /&gt;
 保存，关掉这个文档。&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
-    &lt;p&gt;终端输入命令  &lt;code&gt;source .bash_profile &lt;/code&gt;&lt;/p&gt;
+    &lt;p&gt;终端输入命令  &lt;code class=&quot;highlighter-rouge&quot;&gt;source .bash_profile &lt;/code&gt;&lt;/p&gt;
   &lt;/li&gt;
   &lt;li&gt;
     &lt;p&gt;终端输入命令 adb点回车，如果未显示command not found，说明此命令有效，环境便亮设置完成。&lt;/p&gt;
@@ -541,10 +786,10 @@ Android开源库真的太多了，如果你不是特别闲的话，就去关注�
 
 &lt;ol&gt;
   &lt;li&gt;配置好adb环境变量，使用USB数据线连接手机&lt;/li&gt;
-  &lt;li&gt;在终端输入&lt;code&gt;adb tcpip 5555&lt;/code&gt; (5555为端口号可以自行设置)&lt;/li&gt;
+  &lt;li&gt;在终端输入&lt;code class=&quot;highlighter-rouge&quot;&gt;adb tcpip 5555&lt;/code&gt; (5555为端口号可以自行设置)&lt;/li&gt;
   &lt;li&gt;断开USB线&lt;/li&gt;
-  &lt;li&gt;在终端输入&lt;code&gt;adb connect &amp;lt;设备ip地址&amp;gt;:5555&lt;/code&gt;(ip地址可以在关于手机里面网络状态查到，不同手机略有区别)&lt;/li&gt;
-  &lt;li&gt;当需要使用数据线可以在终端输入&lt;code&gt;adb usb&lt;/code&gt;&lt;/li&gt;
+  &lt;li&gt;在终端输入&lt;code class=&quot;highlighter-rouge&quot;&gt;adb connect &amp;lt;设备ip地址&amp;gt;:5555&lt;/code&gt;(ip地址可以在关于手机里面网络状态查到，不同手机略有区别)&lt;/li&gt;
+  &lt;li&gt;当需要使用数据线可以在终端输入&lt;code class=&quot;highlighter-rouge&quot;&gt;adb usb&lt;/code&gt;&lt;/li&gt;
 &lt;/ol&gt;
 
 &lt;p&gt;连接成功后安装以及显示Logcat都没有问题。&lt;/p&gt;
@@ -558,22 +803,20 @@ Android开源库真的太多了，如果你不是特别闲的话，就去关注�
 
 &lt;p&gt;&lt;img src=&quot;/images/S50508-015351.jpg&quot; alt=&quot;adbWireless&quot; /&gt;&lt;/p&gt;
 
-&lt;p&gt;然后在终端输入&lt;code&gt;adb connect ip&lt;/code&gt;即可（ip软件上有显示）&lt;/p&gt;
+&lt;p&gt;然后在终端输入&lt;code class=&quot;highlighter-rouge&quot;&gt;adb connect ip&lt;/code&gt;即可（ip软件上有显示）&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;/%E6%97%A0%E7%BA%BF%E8%B0%83%E8%AF%95%E4%BD%A0%E7%9A%84Android%E8%AE%BE%E5%A4%87/&quot;&gt;无线调试你的Android设备&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on May 07, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/android/%E6%97%A0%E7%BA%BF%E8%B0%83%E8%AF%95%E4%BD%A0%E7%9A%84Android%E8%AE%BE%E5%A4%87/&quot;&gt;无线调试你的Android设备&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on May 07, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
-  
-
 <entry>
   <title type="html"><![CDATA[Mac使用小技巧]]></title>
-  <link rel="alternate" type="text/html" href="/%E5%AF%B9%E4%BA%8E%E5%BC%80%E5%8F%91%E8%80%85%E5%AE%9E%E7%94%A8%E7%9A%84Mac%E6%8A%80%E5%B7%A7/" />
+ <link rel="alternate" type="text/html" href="/%E5%AF%B9%E4%BA%8E%E5%BC%80%E5%8F%91%E8%80%85%E5%AE%9E%E7%94%A8%E7%9A%84Mac%E6%8A%80%E5%B7%A7/" />
   <id>/对于开发者实用的Mac技巧</id>
   <updated>2015-5-12T00:00:00-00:00</updated>
-  <published>2015-04-21T00:00:00+08:00</published>
+  <published>2015-04-21T00:00:00-04:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -581,26 +824,7 @@ Android开源库真的太多了，如果你不是特别闲的话，就去关注�
     <email>cctanfujun@163.com</email>
   </author>
   <content type="html">
-    &lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
-  &lt;header&gt;
-    &lt;h3&gt;&lt;i class=&quot;fa fa-book&quot;&gt;&lt;/i&gt; Overview&lt;/h3&gt;
-  &lt;/header&gt;
-&lt;div id=&quot;drawer&quot;&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;使用技巧&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;快速打开&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;显示隐藏文件&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;快捷键&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;其他推荐&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;软件推荐&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-
-  &lt;/div&gt;
-&lt;/section&gt;
-&lt;!-- /#table-of-contents --&gt;
-&lt;p&gt;本文将整理mac使用的技巧，分享些提高效率的软件，如果你有什么好的技巧也欢迎回复给我！&lt;/p&gt;
+    &lt;p&gt;本文将整理mac使用的技巧，分享些提高效率的软件，如果你有什么好的技巧也欢迎回复给我！&lt;/p&gt;
 
 &lt;h1 id=&quot;section&quot;&gt;使用技巧&lt;/h1&gt;
 
@@ -614,10 +838,10 @@ Android开源库真的太多了，如果你不是特别闲的话，就去关注�
 在终端输入： 
 &lt;br /&gt;&lt;br /&gt;
 显示Mac隐藏文件的命令：&lt;br /&gt;
-&lt;code&gt;defaults write com.apple.finder AppleShowAllFiles -bool true&lt;/code&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;defaults write com.apple.finder AppleShowAllFiles -bool true&lt;/code&gt;
 &lt;br /&gt;&lt;br /&gt;
 隐藏Mac隐藏文件的命令：&lt;br /&gt;
-&lt;code&gt;defaults write com.apple.finder AppleShowAllFiles -bool false&lt;/code&gt;&lt;/p&gt;
+&lt;code class=&quot;highlighter-rouge&quot;&gt;defaults write com.apple.finder AppleShowAllFiles -bool false&lt;/code&gt;&lt;/p&gt;
 
 &lt;h2 id=&quot;section-3&quot;&gt;快捷键&lt;/h2&gt;
 &lt;p&gt;这东西太多了，而且Mac可以自己自定义很多的，复制粘贴什么的你肯定都会，我就附图一张吧！&lt;br /&gt;
@@ -661,19 +885,17 @@ shift+command+G               前往某个文件夹
 &lt;p&gt;如果你有什么好技巧、好软件也欢迎你回复给我，另本文不定时更新，谢谢阅读！&lt;/p&gt;
 
 
-    &lt;p&gt;&lt;a href=&quot;/%E5%AF%B9%E4%BA%8E%E5%BC%80%E5%8F%91%E8%80%85%E5%AE%9E%E7%94%A8%E7%9A%84Mac%E6%8A%80%E5%B7%A7/&quot;&gt;Mac使用小技巧&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on April 21, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/%E5%AF%B9%E4%BA%8E%E5%BC%80%E5%8F%91%E8%80%85%E5%AE%9E%E7%94%A8%E7%9A%84Mac%E6%8A%80%E5%B7%A7/&quot;&gt;Mac使用小技巧&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on April 21, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
-  
-
 <entry>
   <title type="html"><![CDATA[我的博客]]></title>
-  <link rel="alternate" type="text/html" href="/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" />
+ <link rel="alternate" type="text/html" href="/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/" />
   <id>/我的博客</id>
   <updated>2015-4-17T00:00:00-00:00</updated>
-  <published>2015-04-17T00:00:00+08:00</published>
+  <published>2015-04-17T00:00:00-04:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -683,19 +905,150 @@ shift+command+G               前往某个文件夹
   <content type="html">
     &lt;p&gt;请大家鼓掌欢呼！^ ^&lt;/p&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/&quot;&gt;我的博客&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on April 17, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/%E6%88%91%E7%9A%84%E5%8D%9A%E5%AE%A2/&quot;&gt;我的博客&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on April 17, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
+<entry>
+  <title type="html"><![CDATA[Android学习相关资源]]></title>
+ <link rel="alternate" type="text/html" href="/android/Android%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/" />
+  <id>/android/Android学习相关资源</id>
+  <updated>2015-04-17 13:23:02 -0400T00:00:00-00:00</updated>
+  <published>2015-04-17T00:00:00-04:00</published>
   
+  <author>
+    <name>晓_晨DEV</name>
+    <uri></uri>
+    <email>cctanfujun@163.com</email>
+  </author>
+  <content type="html">
+    &lt;p&gt;这里我将记录一些Android学习相关的资源等。&lt;/p&gt;
+
+&lt;h3 id=&quot;section&quot;&gt;从零开始&lt;/h3&gt;
+&lt;p&gt;如果你基本上不知道Android开发是什么，那么你可以参考下我写的这篇文章
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://tanfujun.cc/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/&quot;&gt;如果你现在学Android&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;android-studio&quot;&gt;Android Studio&lt;/h3&gt;
+&lt;p&gt;使用Android Studio来进行开发已经是主流了，相信不久eclipse会被完全抛弃的。关于Android Studio的学习内容
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://tanfujun.cc/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/&quot;&gt;Why Android Studio?及学习资源整理&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;gradle&quot;&gt;Gradle学习&lt;/h3&gt;
+&lt;p&gt;市面上大部分的Android学习教程目前还是Eclipse，但是使用Android Studio是非常必要的，参见&lt;/p&gt;
+
+&lt;p&gt;&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://rinvay.github.io/android/2015/04/09/Build-Android-with-Gradle/&quot; target=&quot;_blank&quot;&gt;使用Gradle构建Android程序&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://rinvay.github.io/android/2015/03/26/Gradle-Plugin-User-Guide(Translation)/&quot; target=&quot;_blank&quot;&gt;Gradle插件用户指南(译)&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://www.stormzhang.com/&quot; target=&quot;_blank&quot;&gt;stormzhang Android Studio 系列教程&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://tech.meituan.com/mt-apk-packaging.html&quot; target=&quot;_blank&quot;&gt;美团Android自动化之旅—生成渠道包&lt;/a&gt;
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://tech.meituan.com/mt-apk-adaptation.html&quot; target=&quot;_blank&quot;&gt;美团Android自动化之旅—适配渠道包&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;android&quot;&gt;Android工具&lt;/h3&gt;
+
+&lt;p&gt;整理一些实用的工具技巧&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;生成各种分辨率的图标或者简易图标：&lt;a href=&quot;http://jgilfelt.github.io/AndroidAssetStudio/&quot; title=&quot;http://jgilfelt.github.io/AndroidAssetStudio/&quot;&gt;http://jgilfelt.github.io/AndroidAssetStudio/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;一个新的逆向工具，用于替代dex2jar
+官方出品
+Enjarify is designed to work in as many cases as possible, even for code where Dex2jar would fail:&lt;a href=&quot;https://github.com/google/enjarify&quot; title=&quot;https://github.com/google/enjarify&quot;&gt;https://github.com/google/enjarify&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;android-1&quot;&gt;Android库&lt;/h3&gt;
+
+&lt;p&gt;开一篇文章整理Android开发各种库
+&lt;br /&gt;&lt;br /&gt;
+&lt;a href=&quot;http://tanfujun.cc/Android%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/&quot;&gt;Android开源项目整理&lt;/a&gt;&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;sky&quot;&gt;Sky学习&lt;/h3&gt;
+&lt;p&gt;Google发布了开源的sky项目，使用Dart语言来编写Android程序，在目前Android程序运行保证60fps都困难的情况下，提出要以120fps运行Android程序，这是非常有诱惑力的，不管Sky日后是否会成为主流，来学习一下总是没有坏处的，这部分我会写或者整理一些Dart的学习资源。&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;
+    &lt;p&gt;Dart官方网站：&lt;a href=&quot;https://www.dartlang.org/&quot; title=&quot;https://www.dartlang.org/&quot;&gt;https://www.dartlang.org/&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+  &lt;li&gt;
+    &lt;p&gt;Sky SDK地址：&lt;a href=&quot;https://github.com/domokit/sky_engine&quot; title=&quot;https://github.com/domokit/sky_engine&quot;&gt;https://github.com/domokit/sky_engine&lt;/a&gt;&lt;/p&gt;
+  &lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;kotlin&quot;&gt;Kotlin学习&lt;/h3&gt;
+
+&lt;p&gt;JetBrain出品的一门静态语言，使用它进行Android开发非常火爆&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;Kotlin官方网站：&lt;a href=&quot;http://kotlinlang.org/#get-kotlin&quot;&gt;http://kotlinlang.org/#get-kotlin&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;rxjava&quot;&gt;RxJava&lt;/h3&gt;
+
+&lt;p&gt;函数响应式编程库&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;RxJava地址：&lt;a href=&quot;https://github.com/ReactiveX/RxJava&quot; title=&quot;https://github.com/ReactiveX/RxJava&quot;&gt;https://github.com/ReactiveX/RxJava&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;RxAndroid地址：&lt;a href=&quot;https://github.com/ReactiveX/RxAndroid&quot; title=&quot;https://github.com/ReactiveX/RxAndroid&quot;&gt;https://github.com/ReactiveX/RxAndroid&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;retrofit&quot;&gt;Retrofit&lt;/h3&gt;
+
+&lt;p&gt;良心公司Square出品的网络请求库&lt;/p&gt;
+
+&lt;ul&gt;
+  &lt;li&gt;官网地址：&lt;a href=&quot;http://square.github.io/retrofit/&quot; title=&quot;http://square.github.io/retrofit/&quot;&gt;http://square.github.io/retrofit/&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;mvvm--mvp&quot;&gt;MVVM 和 MVP&lt;/h3&gt;
+
+&lt;p&gt;晓晨看了两天Android TV的开发，发现在Android TV中主要使用了MVP的模式，但是Android随后推出的Data Binding，又有人说会让MVVM更加流行，这两种模式很接近，但是细微区别我又说不好，还要好好学习。&lt;/p&gt;
+
+&lt;hr /&gt;
+
+&lt;h3 id=&quot;leakcandry&quot;&gt;LeakCandry&lt;/h3&gt;
+
+&lt;p&gt;用于检测内存泄露，比MAT更加易用&lt;/p&gt;
+
+&lt;p&gt;官网地址：&lt;a href=&quot;https://corner.squareup.com/2015/05/leak-canary.html&quot; title=&quot;https://corner.squareup.com/2015/05/leak-canary.html&quot;&gt;https://corner.squareup.com/2015/05/leak-canary.html&lt;/a&gt;&lt;/p&gt;
+
+
+    &lt;p&gt;&lt;a href=&quot;/android/Android%E5%AD%A6%E4%B9%A0%E7%9B%B8%E5%85%B3%E8%B5%84%E6%BA%90/&quot;&gt;Android学习相关资源&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on April 17, 2015.&lt;/p&gt;
+  </content>
+</entry>
+
 
 <entry>
   <title type="html"><![CDATA[Android开源项目整理]]></title>
-  <link rel="alternate" type="text/html" href="/Android%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/" />
-  <id>/Android开源项目整理</id>
-  <updated>2016-06-03 01:23:02 +0800T00:00:00-00:00</updated>
-  <published>2015-01-02T00:00:00+08:00</published>
+ <link rel="alternate" type="text/html" href="/android/Android%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/" />
+  <id>/android/Android开源项目整理</id>
+  <updated>2016-06-02 13:23:02 -0400T00:00:00-00:00</updated>
+  <published>2015-01-02T00:00:00-05:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -710,19 +1063,17 @@ shift+command+G               前往某个文件夹
     &lt;img src=&quot;http://ww2.sinaimg.cn/bmiddle/a19d4f8dgw1esl0jrlsbbg20g00sg7wh.gif&quot; /&gt;    
 &lt;/figure&gt;
 
-    &lt;p&gt;&lt;a href=&quot;/Android%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/&quot;&gt;Android开源项目整理&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on January 02, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/android/Android%E5%BC%80%E6%BA%90%E9%A1%B9%E7%9B%AE%E6%95%B4%E7%90%86/&quot;&gt;Android开源项目整理&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on January 02, 2015.&lt;/p&gt;
   </content>
 </entry>
 
 
-  
-
 <entry>
-  <title type="html"><![CDATA[30分钟内拥有一个漂亮的博客教程]]></title>
-  <link rel="alternate" type="text/html" href="/%E4%BD%BF%E7%94%A8%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/" />
-  <id>/使用我的模版教程</id>
-  <updated>2015-1-1T00:00:00-00:00</updated>
-  <published>2015-01-01T00:00:00+08:00</published>
+  <title type="html"><![CDATA[博客使用教程]]></title>
+ <link rel="alternate" type="text/html" href="/%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/" />
+  <id>/博客使用教程</id>
+  <updated>2015-01-01T00:00:00-00:00</updated>
+  <published>2015-01-01T00:00:00-05:00</published>
   
   <author>
     <name>晓_晨DEV</name>
@@ -730,255 +1081,32 @@ shift+command+G               前往某个文件夹
     <email>cctanfujun@163.com</email>
   </author>
   <content type="html">
-    &lt;section id=&quot;table-of-contents&quot; class=&quot;toc&quot;&gt;
-  &lt;header&gt;
-    &lt;h3&gt;&lt;i class=&quot;fa fa-book&quot;&gt;&lt;/i&gt; Overview&lt;/h3&gt;
-  &lt;/header&gt;
-&lt;div id=&quot;drawer&quot;&gt;
-&lt;ul id=&quot;markdown-toc&quot;&gt;
-  &lt;li&gt;&lt;a href=&quot;#section&quot; id=&quot;markdown-toc-section&quot;&gt;安装&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#jekyll&quot; id=&quot;markdown-toc-jekyll&quot;&gt;运行Jekyll&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-1&quot; id=&quot;markdown-toc-section-1&quot;&gt;目录结构&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-2&quot; id=&quot;markdown-toc-section-2&quot;&gt;发布你的文章&lt;/a&gt;    &lt;ul&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-3&quot; id=&quot;markdown-toc-section-3&quot;&gt;文章开头&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#overview&quot; id=&quot;markdown-toc-overview&quot;&gt;给你的文章添加OverView导航&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-4&quot; id=&quot;markdown-toc-section-4&quot;&gt;高亮你的文章&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-5&quot; id=&quot;markdown-toc-section-5&quot;&gt;开启或关闭评论&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-6&quot; id=&quot;markdown-toc-section-6&quot;&gt;发布文章的几种模版&lt;/a&gt;        &lt;ul&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-7&quot; id=&quot;markdown-toc-section-7&quot;&gt;基础使用&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-8&quot; id=&quot;markdown-toc-section-8&quot;&gt;文字图片&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-9&quot; id=&quot;markdown-toc-section-9&quot;&gt;引用&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-10&quot; id=&quot;markdown-toc-section-10&quot;&gt;列表&lt;/a&gt;                &lt;ul&gt;
-                  &lt;li&gt;&lt;a href=&quot;#section-11&quot; id=&quot;markdown-toc-section-11&quot;&gt;顺序列表&lt;/a&gt;&lt;/li&gt;
-                  &lt;li&gt;&lt;a href=&quot;#section-12&quot; id=&quot;markdown-toc-section-12&quot;&gt;无序列表&lt;/a&gt;&lt;/li&gt;
-                &lt;/ul&gt;
-              &lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-13&quot; id=&quot;markdown-toc-section-13&quot;&gt;表格&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-14&quot; id=&quot;markdown-toc-section-14&quot;&gt;代码块&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-15&quot; id=&quot;markdown-toc-section-15&quot;&gt;按钮&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-16&quot; id=&quot;markdown-toc-section-16&quot;&gt;提醒&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-17&quot; id=&quot;markdown-toc-section-17&quot;&gt;发布一条链接&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-18&quot; id=&quot;markdown-toc-section-18&quot;&gt;在文章中添加新标签打开链接&lt;/a&gt;&lt;/li&gt;
-          &lt;li&gt;&lt;a href=&quot;#section-19&quot; id=&quot;markdown-toc-section-19&quot;&gt;发布带图片的文章&lt;/a&gt;            &lt;ul&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-20&quot; id=&quot;markdown-toc-section-20&quot;&gt;单图&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-21&quot; id=&quot;markdown-toc-section-21&quot;&gt;发布并排两张图&lt;/a&gt;&lt;/li&gt;
-              &lt;li&gt;&lt;a href=&quot;#section-22&quot; id=&quot;markdown-toc-section-22&quot;&gt;发布并排三张图&lt;/a&gt;&lt;/li&gt;
-            &lt;/ul&gt;
-          &lt;/li&gt;
-        &lt;/ul&gt;
-      &lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-23&quot; id=&quot;markdown-toc-section-23&quot;&gt;发布带大图文章&lt;/a&gt;&lt;/li&gt;
-      &lt;li&gt;&lt;a href=&quot;#section-24&quot; id=&quot;markdown-toc-section-24&quot;&gt;文章注解&lt;/a&gt;&lt;/li&gt;
-    &lt;/ul&gt;
-  &lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#pushgithub&quot; id=&quot;markdown-toc-pushgithub&quot;&gt;Push到github&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#section-25&quot; id=&quot;markdown-toc-section-25&quot;&gt;绑定域名&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a href=&quot;#license&quot; id=&quot;markdown-toc-license&quot;&gt;License&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
+    &lt;h2 id=&quot;section&quot;&gt;文档开头&lt;/h2&gt;
 
-  &lt;/div&gt;
-&lt;/section&gt;
-&lt;!-- /#table-of-contents --&gt;
-
-&lt;p&gt;首先谢谢你打开本文,本博客使用gitpage+jekyll搭建,按照本文的方法能让你在30分钟内搭建一个漂亮的博客&lt;/p&gt;
-
-&lt;h2 id=&quot;section&quot;&gt;安装&lt;/h2&gt;
-
-&lt;p&gt;希望你懂得最基础的git操作，你要有一个github账号，然后我们将使用gitpage来进行搭建博客。&lt;/p&gt;
-
-&lt;p&gt;Jekyll 是一个简单的博客形态的静态站点生产机器。它有一个模版目录，其中包含原始文本格式的文档，通过 Markdown （或者 Textile） 以及 Liquid 转化成一个完整的可发布的静态网站，你可以发布在任何你喜爱的服务器上。Jekyll 也可以运行在 GitHub Page 上，也就是说，你可以使用 GitHub 的服务来搭建你的项目页面、博客或者网站，而且是完全免费的。&lt;/p&gt;
-
-&lt;p&gt;安装 Jekyll 相当简单，但是你得先做好一些准备工作。开始前你需要确保你在系统里已经有如下配置。&lt;/p&gt;
-
-&lt;ul&gt;
-  &lt;li&gt;Ruby&lt;/li&gt;
-  &lt;li&gt;RubyGems&lt;/li&gt;
-  &lt;li&gt;Linux, Unix, or Mac OS X&lt;/li&gt;
-  &lt;li&gt;NodeJS, 或其他 JavaScript 运行环境&lt;/li&gt;
-&lt;/ul&gt;
-
-&lt;p&gt;你需要安装&lt;a href=&quot;http://jekyllrb.com/&quot;&gt;Jekyll2.2+&lt;/a&gt;jekyll的学习使用你可以参考它的中文站，你可以运行&lt;code&gt;gem update jekyll&lt;/code&gt;来升级jekyll。&lt;/p&gt;
-
-&lt;p&gt;我们推荐使用Mac OS X 或者 是Linux ，当然你使用Windows也是可以滴，我相信你有能力自己百度安装好环境。&lt;/p&gt;
-
-&lt;p&gt;如果你是第一次使用jekyll你可以按照如下步骤操作：&lt;/p&gt;
-
-&lt;ol&gt;
-  &lt;li&gt;Fork 我的项目&lt;a href=&quot;https://github.com/cctanfujun/cctanfujun.github.com&quot;&gt;晓_晨的博客&lt;/a&gt;  如果你能Star一下我就更开心了&lt;/li&gt;
-  &lt;li&gt;把repo clone 下重命名&lt;/li&gt;
-  &lt;li&gt;安装&lt;a href=&quot;http://bundler.io&quot;&gt;Bundler&lt;/a&gt; &lt;code&gt;gem install bundler&lt;/code&gt;执行&lt;code&gt;bundle install&lt;/code&gt; 安装依赖 (Jekyll, &lt;a href=&quot;https://github.com/jekyll/jekyll-sitemap&quot;&gt;Jekyll-Sitemap&lt;/a&gt;, &lt;a href=&quot;https://github.com/octopress/octopress&quot;&gt;Octopress&lt;/a&gt;, etc)&lt;/li&gt;
-  &lt;li&gt;更新&lt;code&gt;config.yml&lt;/code&gt;添加导航，更换_post文件夹内的文章。&lt;/li&gt;
-  &lt;li&gt;你应该删除目录中的CNAME文件，如果你不想绑定域名的话，或者你可以修改它，我将在后面的教程中说明。&lt;/li&gt;
-&lt;/ol&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;jekyll&quot;&gt;运行Jekyll&lt;/h2&gt;
-
-&lt;p&gt;如果你使用&lt;code&gt;jekyll build&lt;/code&gt;和&lt;code&gt;jekyll server&lt;/code&gt;命令报错，那么你可能需要使用&lt;code&gt;bundled exec&lt;/code&gt;&lt;/p&gt;
-
-&lt;blockquote&gt;
-  &lt;p&gt;In some cases, running executables without bundle exec may work, if the executable happens to be installed in your system and does not pull in any gems that conflict with your bundle.&lt;/p&gt;
-
-  &lt;p&gt;However, this is unreliable and is the source of considerable pain. Even if it looks like it works, it may not work in the future or on another machine.&lt;/p&gt;
-&lt;/blockquote&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;bundle exec jekyll build
-
-bundle exec jekyll serve&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-1&quot;&gt;目录结构&lt;/h2&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;cctanfujun.github.io/
-├── _includes/
-|    ├── _author-bio.html        # bio stuff layout. pulls optional owner data from _config.yml
-|    ├── _browser-upgrade.html   # prompt to install a modern browser for &amp;lt; IE9
-|    ├── _disqus_comments.html   # 多说comments script
-|    ├── _footer.html            # site footer
-|    ├── _head.html              # site head
-|    ├── _navigation.html        # site top navigation
-|    ├── _open-graph.html        # Twitter Cards and Open Graph meta data
-|    └── _scripts.html           # site scripts
-├── _layouts/
-|    ├── home.html               # homepage layout
-|    ├── page.html               # page layout
-|    ├── post-index.html         # post index layout
-|    └── post.html               # single post layout
-├── _posts/                      # MarkDown formatted posts
-├── _sass/                       # Sass stylesheets
-├── _templates/                  # used by Octopress to define YAML variables for new posts/pages
-├── about/                       # sample about page
-├── assets/
-|    ├── css/                    # compiled stylesheets
-|    ├── fonts/                  # webfonts
-|    ├── js/
-|    |   ├── _main.js            # main JavaScript file, plugin settings, etc
-|    |   ├── plugins/            # scripts and jQuery plugins to combine with _main.js
-|    |   ├── scripts.min.js      # concatenated and minified _main.js + plugin scripts
-|    |   └── vendor/             # vendor scripts to leave alone and load as is
-|    └── less/
-├── images/                      # images for posts and pages
-├── 404.md                       # 404 page
-├── feed.xml                     # Atom feed template
-├── index.md                     # sample homepage. lists 5 latest posts 
-├── posts/                       # sample post index page. lists all posts in reverse chronology
-└── theme-android/                 # theme setup page. safe to remove
-|—— theme-iOS/
-|__ theme-network/&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;在这部分需要关心的仅仅是，文章是在_post这个文件夹里，你可以按照里面的模版添加文章即可，每个导航对应一个文件夹，如/about 这部分定义在 &lt;code&gt;navigation.yml&lt;/code&gt;里，你可以自行修改，头像图片什么的我相信你会修改的。&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;section-2&quot;&gt;发布你的文章&lt;/h2&gt;
-&lt;p&gt;现在你可以写你自己的博客了，你只需编写md文件在_post文件夹中，MarkDown语法非常简单。你需要按照&lt;code&gt;日期+文章标题&lt;/code&gt;来命名文章文件名，接下来我将教你一些特别的事。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-3&quot;&gt;文章开头&lt;/h3&gt;
-
-&lt;p&gt;在你的文章开头，你需要加上这样一段头&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-text&quot; data-lang=&quot;text&quot;&gt;---
+&lt;div class=&quot;highlighter-rouge&quot;&gt;&lt;pre class=&quot;highlight&quot;&gt;&lt;code&gt;---
 layout: post
-title: 使用我的博客作为模版教程
-excerpt: “如果你想使用我的博客作为你搭建博客的模版请你阅读如下教程，这会让你在30分钟内拥有一个漂亮的博客”
-tags: [study， post, code, highlighting]
+title: 博客使用教程
+excerpt: &quot;博客使用教程&quot;
+category: [blog]
+tags: [blog] 	                 //多个tag逗号分隔   
+image:
+  background: triangular.png  //背景图片
+  feature: feature.jpg        //开始图片
 modified: 2015-01-01
-comments: true
----&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;用来写文章标题，简介，发布时间，类别，以及是否开启评论。&lt;/p&gt;
-
-&lt;h3 id=&quot;overview&quot;&gt;给你的文章添加OverView导航&lt;/h3&gt;
-
-&lt;p&gt;在文章开始的地方添加&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% include _toc.html %}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;h3 id=&quot;section-4&quot;&gt;高亮你的文章&lt;/h3&gt;
-
-&lt;p&gt;同样你只需要用&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{% highlight html %}{% endhighlight %}&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;来包裹你要高亮的代码&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;pagination&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;navigation&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    {% if page.previous %}
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ site.url }}{{ page.previous.url }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ page.previous.title }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Previous article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    {% endif %}
-    {% if page.next %}
-        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ site.url }}{{ page.next.url }}&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;{{ page.next.title }}&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    {% endif %}
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.pagination --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TagIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Page&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;
-      &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;index.html&amp;#39;&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;read_yaml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;_layouts&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;tag_index.html&amp;#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;tag&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;tag_title_prefix&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;Tagged: &amp;#39;&lt;/span&gt;
-      &lt;span class=&quot;n&quot;&gt;tag_title_suffix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;tag_title_suffix&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&amp;#39;&amp;amp;#8211;&amp;#39;&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;title&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&amp;quot;&lt;/span&gt;
-      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&amp;#39;description&amp;#39;&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&amp;quot;An archive of posts tagged &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.&amp;quot;&lt;/span&gt;
-    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
-&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;或者你可以这样来包裹代码块&lt;/p&gt;
-
-&lt;pre&gt;&lt;code&gt;&amp;lt;nav class=&quot;pagination&quot; role=&quot;navigation&quot;&amp;gt;
-    {% if page.previous %}
-        &amp;lt;a href=&quot;{{ site.url }}{{ page.previous.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.previous.title }}&quot;&amp;gt;Previous article&amp;lt;/a&amp;gt;
-    {% endif %}
-    {% if page.next %}
-        &amp;lt;a href=&quot;{{ site.url }}{{ page.next.url }}&quot; class=&quot;btn&quot; title=&quot;{{ page.next.title }}&quot;&amp;gt;Next article&amp;lt;/a&amp;gt;
-    {% endif %}
-&amp;lt;/nav&amp;gt;&amp;lt;!-- /.pagination --&amp;gt;
+comments: false   	
+share: false
+---
 &lt;/code&gt;&lt;/pre&gt;
+&lt;/div&gt;
 
-&lt;h3 id=&quot;section-5&quot;&gt;开启或关闭评论&lt;/h3&gt;
+&lt;h2 id=&quot;section-1&quot;&gt;常规&lt;/h2&gt;
 
-&lt;p&gt;在文章开头设置&lt;code&gt;comments：true&lt;/code&gt; 可以开启文章多说评论，但是你需要进行一些修改。
-你需要修改&lt;code&gt;_disqus_comments.html&lt;/code&gt;文件中的&lt;code&gt;shortname &lt;/code&gt;把它换为你自己在多说上注册的，我们使用的是多说的通用代码。&lt;/p&gt;
-
-&lt;h3 id=&quot;section-6&quot;&gt;发布文章的几种模版&lt;/h3&gt;
-
-&lt;h4 id=&quot;section-7&quot;&gt;基础使用&lt;/h4&gt;
-
-&lt;h5 id=&quot;section-8&quot;&gt;文字图片&lt;/h5&gt;
-
-&lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. &lt;strong&gt;This is strong&lt;/strong&gt;. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
-
-&lt;p class=&quot;image-pull-right&quot;&gt;&lt;img src=&quot;/images/3953273590_704e3899d5_m.jpg&quot; alt=&quot;Smithsonian Image&quot; /&gt;&lt;/p&gt;
-
-&lt;p&gt;&lt;em&gt;This is emphasized&lt;/em&gt;. Donec faucibus. Nunc iaculis suscipit dui. 53 = 125. Water is H2O. Nam sit amet sem. Aliquam libero nisi, imperdiet at, tincidunt nec, gravida vehicula, nisl. The New York Times (That’s a citation). Underline.Maecenas ornare tortor. Donec sed tellus eget sapien fringilla nonummy. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus.&lt;/p&gt;
-
-&lt;p&gt;HTML and CSS are our tools. Mauris a ante. Suspendisse quam sem, consequat at, commodo vitae, feugiat in, nunc. Morbi imperdiet augue quis tellus. Praesent mattis, massa quis luctus fermentum, turpis mi volutpat justo, eu volutpat enim diam eget metus.&lt;/p&gt;
-
-&lt;h5 id=&quot;section-9&quot;&gt;引用&lt;/h5&gt;
-
+&lt;h3 id=&quot;section-2&quot;&gt;引用&lt;/h3&gt;
 &lt;blockquote&gt;
   &lt;p&gt;Lorem ipsum dolor sit amet, test link adipiscing elit. Nullam dignissim convallis est. Quisque aliquam.&lt;/p&gt;
 &lt;/blockquote&gt;
 
-&lt;h5 id=&quot;section-10&quot;&gt;列表&lt;/h5&gt;
-
-&lt;h6 id=&quot;section-11&quot;&gt;顺序列表&lt;/h6&gt;
+&lt;h3 id=&quot;section-3&quot;&gt;有序列表&lt;/h3&gt;
 
 &lt;ol&gt;
   &lt;li&gt;Item one
@@ -991,7 +1119,7 @@ comments: true
   &lt;li&gt;Item two&lt;/li&gt;
 &lt;/ol&gt;
 
-&lt;h6 id=&quot;section-12&quot;&gt;无序列表&lt;/h6&gt;
+&lt;h3 id=&quot;section-4&quot;&gt;无序列表&lt;/h3&gt;
 
 &lt;ul&gt;
   &lt;li&gt;Item one&lt;/li&gt;
@@ -999,7 +1127,7 @@ comments: true
   &lt;li&gt;Item three&lt;/li&gt;
 &lt;/ul&gt;
 
-&lt;h5 id=&quot;section-13&quot;&gt;表格&lt;/h5&gt;
+&lt;h3 id=&quot;section-5&quot;&gt;表格&lt;/h3&gt;
 
 &lt;table rules=&quot;groups&quot;&gt;
   &lt;thead&gt;
@@ -1042,19 +1170,11 @@ comments: true
   &lt;/tfoot&gt;
 &lt;/table&gt;
 
-&lt;h5 id=&quot;section-14&quot;&gt;代码块&lt;/h5&gt;
+&lt;h3 id=&quot;section-6&quot;&gt;按钮&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;k&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-  &lt;span class=&quot;k&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
-&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Make any link standout more when applying the &lt;code class=&quot;highlighter-rouge&quot;&gt;.btn&lt;/code&gt; class.&lt;/p&gt;
 
-&lt;h5 id=&quot;section-15&quot;&gt;按钮&lt;/h5&gt;
-
-&lt;p&gt;Make any link standout more when applying the &lt;code&gt;.btn&lt;/code&gt; class.&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;#&amp;quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;btn btn-success&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Success Button&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;#&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn btn-success&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Success Button&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
 &lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Primary Button&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-success&quot;&gt;Success Button&lt;/a&gt;&lt;/div&gt;
@@ -1062,116 +1182,182 @@ comments: true
 &lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-danger&quot;&gt;Danger Button&lt;/a&gt;&lt;/div&gt;
 &lt;div&gt;&lt;a href=&quot;#&quot; class=&quot;btn btn-info&quot;&gt;Info Button&lt;/a&gt;&lt;/div&gt;
 
-&lt;h5 id=&quot;section-16&quot;&gt;提醒&lt;/h5&gt;
+&lt;h2 id=&quot;section-7&quot;&gt;代码高亮&lt;/h2&gt;
 
-&lt;p class=&quot;notice&quot;&gt;&lt;strong&gt;Watch out!&lt;/strong&gt; You can also add notices by appending &lt;code&gt;{: .notice}&lt;/code&gt; to a paragraph.&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-css&quot; data-lang=&quot;css&quot;&gt;&lt;span class=&quot;nf&quot;&gt;#container&lt;/span&gt; &lt;span class=&quot;p&quot;&gt;{&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;float&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;nb&quot;&gt;left&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;margin&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;-240px&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;0&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;width&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;:&lt;/span&gt; &lt;span class=&quot;m&quot;&gt;100%&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;;&lt;/span&gt;
+&lt;span class=&quot;p&quot;&gt;}&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;section-17&quot;&gt;发布一条链接&lt;/h4&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;nav&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;pagination&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;role=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;navigation&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+    {% if page.previous %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.previous.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.previous.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Previous article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+    {% if page.next %}
+        &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ site.url }}{{ page.next.url }}&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;btn&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;title=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;{{ page.next.title }}&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;Next article&lt;span class=&quot;nt&quot;&gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+    {% endif %}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/nav&amp;gt;&lt;/span&gt;&lt;span class=&quot;c&quot;&gt;&amp;lt;!-- /.pagination --&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;在文章开头增加link标签，可以让文章带上链接
-&lt;code&gt;link: http://tanfujun.cc &lt;/code&gt;&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-ruby&quot; data-lang=&quot;ruby&quot;&gt;&lt;span class=&quot;k&quot;&gt;module&lt;/span&gt; &lt;span class=&quot;nn&quot;&gt;Jekyll&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;class&lt;/span&gt; &lt;span class=&quot;nc&quot;&gt;TagIndex&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;&amp;lt;&lt;/span&gt; &lt;span class=&quot;no&quot;&gt;Page&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;def&lt;/span&gt; &lt;span class=&quot;nf&quot;&gt;initialize&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@site&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@base&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@dir&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dir&lt;/span&gt;
+      &lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;index.html&#39;&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;process&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;vi&quot;&gt;@name&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;read_yaml&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;no&quot;&gt;File&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;join&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;(&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;base&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;_layouts&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;),&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;tag_index.html&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;)&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;tag&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;tag_title_prefix&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;Tagged: &#39;&lt;/span&gt;
+      &lt;span class=&quot;n&quot;&gt;tag_title_suffix&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;site&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;config&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;tag_title_suffix&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;||&lt;/span&gt; &lt;span class=&quot;s1&quot;&gt;&#39;&amp;amp;#8211;&#39;&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;title&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag_title_prefix&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;&quot;&lt;/span&gt;
+      &lt;span class=&quot;nb&quot;&gt;self&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;nf&quot;&gt;data&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;s1&quot;&gt;&#39;description&#39;&lt;/span&gt;&lt;span class=&quot;p&quot;&gt;]&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;=&lt;/span&gt; &lt;span class=&quot;s2&quot;&gt;&quot;An archive of posts tagged &lt;/span&gt;&lt;span class=&quot;si&quot;&gt;#{&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;tag&lt;/span&gt;&lt;span class=&quot;si&quot;&gt;}&lt;/span&gt;&lt;span class=&quot;s2&quot;&gt;.&quot;&lt;/span&gt;
+    &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+  &lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;
+&lt;span class=&quot;k&quot;&gt;end&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;section-18&quot;&gt;在文章中添加新标签打开链接&lt;/h4&gt;
+&lt;h2 id=&quot;link&quot;&gt;Link文章&lt;/h2&gt;
 
-&lt;p&gt;你需要在markdown文本中这样添加你的链接&lt;/p&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;layout:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;title:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Sample Link Post&quot;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;description:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Example and code for using link posts.&quot;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;tags:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;,&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;link&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;comments:&lt;/span&gt; &lt;span class=&quot;kc&quot;&gt;true&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;link:&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;http:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//mademistakes.com&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;categories:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;intro&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
 
-&lt;pre&gt;
-[晓_晨DEV的博客](http://tanfujun.cc){:target=&quot;_blank&quot;}
-&lt;/pre&gt;
+&lt;span class=&quot;err&quot;&gt;添加&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;link&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;**&lt;/span&gt;&lt;span class=&quot;err&quot;&gt;标签可以发布文章链接&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h4 id=&quot;section-19&quot;&gt;发布带图片的文章&lt;/h4&gt;
+&lt;h2 id=&quot;section-8&quot;&gt;具有标题图文章&lt;/h2&gt;
 
-&lt;h5 id=&quot;section-20&quot;&gt;单图&lt;/h5&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;layout:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;title:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Sample&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;with&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Feature&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Image&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;description:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Sample Post with Feature Image&quot;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;tags:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;image:&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;feature:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;feature&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;.&lt;/span&gt;&lt;span class=&quot;na&quot;&gt;jpg&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;credit:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dargadgetz&lt;/span&gt;
+    &lt;span class=&quot;nl&quot;&gt;creditlink:&lt;/span&gt; &lt;span class=&quot;nl&quot;&gt;http:&lt;/span&gt;&lt;span class=&quot;c1&quot;&gt;//www.dargadgetz.com/ios-8-abstract-wallpaper-pack-for-iphone-5s-5c-and-ipod-touch-retina/&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;section-9&quot;&gt;使用黑色主题&lt;/h2&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-java&quot; data-lang=&quot;java&quot;&gt;&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;layout:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;dark&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;-&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;title:&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Dark&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;Post&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;description:&lt;/span&gt; &lt;span class=&quot;s&quot;&gt;&quot;Sample Dark post&quot;&lt;/span&gt;
+&lt;span class=&quot;nl&quot;&gt;tags:&lt;/span&gt; &lt;span class=&quot;o&quot;&gt;[&lt;/span&gt;&lt;span class=&quot;n&quot;&gt;sample&lt;/span&gt; &lt;span class=&quot;n&quot;&gt;post&lt;/span&gt;&lt;span class=&quot;o&quot;&gt;]&lt;/span&gt;
+&lt;span class=&quot;o&quot;&gt;---&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;section-10&quot;&gt;添加视频&lt;/h2&gt;
+
+&lt;p&gt;在文章中添加&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;{::nomarkdown}
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;iframe&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;width=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;560&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;height=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;315&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;//www.youtube.com/embed/SU3kYxJmWuQ&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;frameborder=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;0&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;allowfullscreen&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/iframe&amp;gt;&lt;/span&gt;
+{:/nomarkdown}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;h2 id=&quot;section-11&quot;&gt;图片高级用法&lt;/h2&gt;
+
+&lt;h3 id=&quot;one-up&quot;&gt;One Up&lt;/h3&gt;
 
 &lt;figure&gt;
-	&lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
 	&lt;figcaption&gt;&lt;a href=&quot;http://www.flickr.com/photos/80901381@N04/7758832526/&quot; title=&quot;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&quot;&gt;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&lt;/a&gt;.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;p&gt;你应该使用figure来发布图片。&lt;/p&gt;
+&lt;h3 id=&quot;one-center&quot;&gt;One Center&lt;/h3&gt;
 
-&lt;h5 id=&quot;section-21&quot;&gt;发布并排两张图&lt;/h5&gt;
+&lt;figure class=&quot;half center&quot;&gt;
+	&lt;a href=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_b.jpg&quot;&gt;&lt;img src=&quot;http://farm9.staticflickr.com/8426/7758832526_cc8f681e48_c.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;figcaption&gt;&lt;a href=&quot;http://www.flickr.com/photos/80901381@N04/7758832526/&quot; title=&quot;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&quot;&gt;Morning Fog Emerging From Trees by A Guy Taking Pictures, on Flickr&lt;/a&gt;.&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;half&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-1-large.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-1.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-2-large.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-2.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
-    &lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these two images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;h3 id=&quot;two-up&quot;&gt;Two Up&lt;/h3&gt;
 
-&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;p&gt;Apply the &lt;code class=&quot;highlighter-rouge&quot;&gt;half&lt;/code&gt; class like so to display two images side by side that share the same caption.&lt;/p&gt;
+
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;half&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-1.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;/images/image-filename-2.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these two images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
+
+&lt;p&gt;And you’ll get something that looks like this:&lt;/p&gt;
 
 &lt;figure class=&quot;half&quot;&gt;
-	&lt;a href=&quot;http://placehold.it/1200x600.JPG&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;&lt;/a&gt;
-	&lt;a href=&quot;http://placehold.it/1200x600.jpeg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;
+	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;
 	&lt;figcaption&gt;Two images.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h5 id=&quot;section-22&quot;&gt;发布并排三张图&lt;/h5&gt;
+&lt;h3 id=&quot;three-up&quot;&gt;Three Up&lt;/h3&gt;
 
-&lt;p&gt;这样发布并排三张图&lt;/p&gt;
+&lt;p&gt;Apply the &lt;code class=&quot;highlighter-rouge&quot;&gt;third&lt;/code&gt; class like so to display three images side by side that share the same caption.&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;third&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-1.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-2.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
-	&lt;span class=&quot;nt&quot;&gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&amp;quot;/images/image-filename-3.jpg&amp;quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;&lt;span class=&quot;nt&quot;&gt;&amp;lt;figure&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;class=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;third&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://placehold.it/1200x600.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://placehold.it/600x300.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://placehold.it/1200x600.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://placehold.it/600x300.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
+	&lt;span class=&quot;nt&quot;&gt;&amp;lt;a&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;href=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://placehold.it/1200x600.jpg&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;img&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;src=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;http://placehold.it/600x300.jpg&quot;&lt;/span&gt; &lt;span class=&quot;na&quot;&gt;alt=&lt;/span&gt;&lt;span class=&quot;s&quot;&gt;&quot;&quot;&lt;/span&gt;&lt;span class=&quot;nt&quot;&gt;&amp;gt;&amp;lt;/a&amp;gt;&lt;/span&gt;
 	&lt;span class=&quot;nt&quot;&gt;&amp;lt;figcaption&amp;gt;&lt;/span&gt;Caption describing these three images.&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figcaption&amp;gt;&lt;/span&gt;
-&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;span class=&quot;nt&quot;&gt;&amp;lt;/figure&amp;gt;&lt;/span&gt;&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;p&gt;效果如下：&lt;/p&gt;
+&lt;p&gt;And you’ll get something that looks like this:&lt;/p&gt;
 
 &lt;figure class=&quot;third&quot;&gt;
-	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
-	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
-	&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; /&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+	&lt;a href=&quot;http://placehold.it/1200x600.jpg&quot;&gt;&lt;img src=&quot;http://placehold.it/600x300.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
 	&lt;figcaption&gt;Three images.&lt;/figcaption&gt;
 &lt;/figure&gt;
 
-&lt;h3 id=&quot;section-23&quot;&gt;发布带大图文章&lt;/h3&gt;
-&lt;p&gt;在文章带一部分加入，可以让文章带上大图&lt;/p&gt;
+&lt;h3 id=&quot;alternative-way&quot;&gt;Alternative way&lt;/h3&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;image:
-  feature: sample-image-6.jpg&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
+&lt;p&gt;Another way to achieve the same result is to include &lt;code class=&quot;highlighter-rouge&quot;&gt;gallery&lt;/code&gt; Liquid template. In this case you
+don’t have to write any HTML tags – just copy a small block of code, adjust the parameters (see below)
+and fill the block with any number of links to images. You can mix relative and external links.&lt;/p&gt;
 
-&lt;h3 id=&quot;section-24&quot;&gt;文章注解&lt;/h3&gt;
-&lt;p&gt;你可以这样使用注解&lt;sup id=&quot;fnref:1&quot;&gt;&lt;a href=&quot;#fn:1&quot; class=&quot;footnote&quot;&gt;1&lt;/a&gt;&lt;/sup&gt;&lt;/p&gt;
+&lt;p&gt;Here is the block you might want to use:&lt;/p&gt;
 
-&lt;hr /&gt;
+&lt;figure class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-jinja&quot; data-lang=&quot;jinja&quot;&gt;{% capture images %}
+	/images/abstract-10.jpg
+	/images/abstract-11.jpg
+	http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png
+{% endcapture %}
+{% include gallery images=images caption=&quot;Test images&quot; cols=3 %}&lt;/code&gt;&lt;/pre&gt;&lt;/figure&gt;
 
-&lt;h2 id=&quot;pushgithub&quot;&gt;Push到github&lt;/h2&gt;
+&lt;p&gt;Parameters:&lt;/p&gt;
 
-&lt;p&gt;接下来把你的项目push到你的github中名为&lt;yourusername&gt;.github.com的仓库中，然后等10多分钟，再访问 yourusername.github.io就能看见你的博客了。&lt;/yourusername&gt;&lt;/p&gt;
+&lt;ul&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;caption&lt;/code&gt;: Sets the caption under the gallery (see &lt;code class=&quot;highlighter-rouge&quot;&gt;figcaption&lt;/code&gt; HTML tag above);&lt;/li&gt;
+  &lt;li&gt;&lt;code class=&quot;highlighter-rouge&quot;&gt;cols&lt;/code&gt;: Sets the number of columns of the gallery.
+Available values: [1..3].&lt;/li&gt;
+&lt;/ul&gt;
 
-&lt;hr /&gt;
+&lt;p&gt;It will look something like this:&lt;/p&gt;
 
-&lt;h2 id=&quot;section-25&quot;&gt;绑定域名&lt;/h2&gt;
+&lt;figure class=&quot;third&quot;&gt;
+    
+    &lt;a href=&quot;/images/abstract-10.jpg&quot;&gt;&lt;img src=&quot;/images/abstract-10.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;/images/abstract-11.jpg&quot;&gt;&lt;img src=&quot;/images/abstract-11.jpg&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;a href=&quot;http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png&quot;&gt;&lt;img src=&quot;http://upload.wikimedia.org/wikipedia/en/2/24/Lenna.png&quot; alt=&quot;&quot; /&gt;&lt;/a&gt;
+    
+    &lt;figcaption&gt;Test images&lt;/figcaption&gt;
+&lt;/figure&gt;
 
-&lt;p&gt;如果你要绑定一级域名，你需要配置DNS，再来看在GitHub的配置，要想要username.github.io能通过你自己的域名来访问，需要在项目的根目录下新建一个名为CNAME的文件，文件内容形如：&lt;/p&gt;
 
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;www.aips.me&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;你也可以绑定在二级域名上：&lt;/p&gt;
-
-&lt;div class=&quot;highlight&quot;&gt;&lt;pre&gt;&lt;code class=&quot;language-html&quot; data-lang=&quot;html&quot;&gt;blog.aips.me&lt;/code&gt;&lt;/pre&gt;&lt;/div&gt;
-
-&lt;p&gt;需要提醒的一点是，如果你使用形如tanfujun.com这样的一级域名的话，需要在DNS处设置A记录到192.30.252.153（这个地址会有变动，&lt;a href=&quot;https://help.github.com/articles/my-custom-domain-isn-t-working/&quot;&gt;这里&lt;/a&gt;查看），而不是在DNS处设置为CNAME的形式，否则可能会对其他服务（比如email）造成影响。 设置成功后，根据DNS的情况，最长可能需要一天才能生效，耐心等待吧。&lt;/p&gt;
-
-&lt;p&gt;你可以也参考&lt;a href=&quot;https://help.github.com/articles/my-custom-domain-isn-t-working/&quot;&gt;这里&lt;/a&gt;&lt;/p&gt;
-
-&lt;hr /&gt;
-
-&lt;h2 id=&quot;license&quot;&gt;License&lt;/h2&gt;
-
-&lt;p&gt;This theme is free and open source software, distributed under the MIT License. So feel free to use this Jekyll theme on your site without linking back to me or including a disclaimer.&lt;/p&gt;
-
-&lt;div class=&quot;footnotes&quot;&gt;
-  &lt;ol&gt;
-    &lt;li id=&quot;fn:1&quot;&gt;
-      &lt;p&gt;这个注解是这样的 &lt;a href=&quot;http://tanfujun.cc/&quot;&gt;晓_晨的博客&lt;/a&gt; &lt;a href=&quot;#fnref:1&quot; class=&quot;reversefootnote&quot;&gt;&amp;#8617;&lt;/a&gt;&lt;/p&gt;
-    &lt;/li&gt;
-  &lt;/ol&gt;
-&lt;/div&gt;
-
-    &lt;p&gt;&lt;a href=&quot;/%E4%BD%BF%E7%94%A8%E6%88%91%E7%9A%84%E6%A8%A1%E7%89%88%E6%95%99%E7%A8%8B/&quot;&gt;30分钟内拥有一个漂亮的博客教程&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV的博客&lt;/a&gt; on January 01, 2015.&lt;/p&gt;
+    &lt;p&gt;&lt;a href=&quot;/%E5%8D%9A%E5%AE%A2%E4%BD%BF%E7%94%A8%E6%95%99%E7%A8%8B/&quot;&gt;博客使用教程&lt;/a&gt; was originally published by 晓_晨DEV at &lt;a href=&quot;&quot;&gt;晓_晨DEV&lt;/a&gt; on January 01, 2015.&lt;/p&gt;
   </content>
 </entry>
 

@@ -5,59 +5,44 @@
 <!--[if gt IE 8]><!--> <html class="no-js" lang="en"><!--<![endif]-->
 <head>
 <meta charset="utf-8">
-<title>Git速查表 &#8211; 晓_晨DEV的博客</title>
-<meta property="wb:webmaster" content="c54d7cd9867e7171" />
-<meta name="description" content="放两张Git速查表，方便使用">
-<meta name="keywords" content="git">
+<title>Git速查表 &#8211; 晓_晨DEV</title>
+<meta name="description" content="总结开发过程中的要点，提升自己">
+<meta name="keywords" content="Tool">
 
 
-
-<!-- Twitter Cards -->
-<meta name="twitter:title" content="Git速查表">
-<meta name="twitter:description" content="放两张Git速查表，方便使用">
-
-
-
-<meta name="twitter:card" content="summary">
-<meta name="twitter:image" content="/images/default-thumb.png">
 
 <!-- Open Graph -->
-<meta property="og:locale" content="zh_CN">
+<meta property="og:locale" content="en_US">
 <meta property="og:type" content="article">
 <meta property="og:title" content="Git速查表">
-<meta property="og:description" content="放两张Git速查表，方便使用">
+<meta property="og:description" content="总结开发过程中的要点，提升自己">
 <meta property="og:url" content="/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/">
-<meta property="og:site_name" content="晓_晨DEV的博客">
+<meta property="og:site_name" content="晓_晨DEV">
+<meta property="og:image" content="/images/images/logo.png">
 
 
 
 
 
 <link rel="canonical" href="/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/">
-<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="晓_晨DEV的博客 Feed">
+<link href="/feed.xml" type="application/atom+xml" rel="alternate" title="晓_晨DEV Feed">
 
 <!-- http://t.co/dKP3o1e -->
 <meta name="HandheldFriendly" content="True">
 <meta name="MobileOptimized" content="320">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0, user-scalable=no"/>
 
 <!-- For all browsers -->
 <link rel="stylesheet" href="/assets/css/main.css">
+<link rel="stylesheet" href="/assets/css/jquery.mmenu.all.css">
+<link rel="stylesheet" href="/assets/css/jquery.floating-social-share.min.css">
+<!-- Webfonts -->
+<link href="//fonts.useso.com/css?family=Lato:300,400,700,300italic,400italic" rel="stylesheet" type="text/css">
 
 <meta http-equiv="cleartype" content="on">
 
-<!-- HTML5 Shiv and Media Query Support -->
-<!--[if lt IE 9]>
-	<script src="/assets/js/vendor/html5shiv.min.js"></script>
-	<script src="/assets/js/vendor/respond.min.js"></script>
-<![endif]-->
-
-<!-- Modernizr -->
-<script src="/assets/js/vendor/modernizr-2.7.1.custom.min.js"></script>
-<!--加入微博评论js-->
-<script src="http://tjs.sjs.sinajs.cn/open/api/js/wb.js" type="text/javascript" charset="utf-8"></script>
-
-<link href='//fonts.googleapis.com/css?family=PT+Sans+Narrow:400,700%7CPT+Serif:400,700,400italic' rel='stylesheet' type='text/css'>
+<!-- Load Modernizr -->
+<script type="text/javascript" src="/assets/js/vendor/modernizr-2.6.2.custom.min.js"></script>
 
 <!-- Icons -->
 <!-- 16x16 -->
@@ -73,100 +58,171 @@
 <!-- 144x144 (precomposed) for iPad 3rd and 4th generation -->
 <link rel="apple-touch-icon-precomposed" sizes="144x144" href="/images/apple-touch-icon-144x144-precomposed.png">
 
+
+
+
+
+<style type="text/css">body {background-image:url(/images/triangular.png);}</style>
+
+
 </head>
 
-<body class="post">
+<body id="post" >
 
-<!--[if lt IE 9]><div class="browser-upgrade alert alert-info">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</div><![endif]-->
+<!--[if lt IE 9]><div class="upgrade"><strong><a href="http://whatbrowser.org/">Your browser is quite old!</strong> Why not upgrade to a different browser to better enjoy this site?</a></div><![endif]-->
 
-<div class="navigation-wrapper">
-	<div class="site-name">
-		<a href="/">晓_晨DEV的博客</a>
-	</div><!-- /.site-name -->
-	<div class="top-navigation">
-		<nav role="navigation" id="site-nav" class="nav">
-		    <ul>
-		        
-				    
-				        
-				    
-				    <li><a href="//tanfujun.com/" >首页</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/posts/" >文章轨迹</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/theme-android/" >Android学习</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/theme-ios/" >iOS学习</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/theme-network/" >互联网Tips</a></li>
-				
-				    
-				        
-				    
-				    <li><a href="/about/" >关于我</a></li>
-				
-		    </ul>
-		</nav>
-	</div><!-- /.top-navigation -->
-</div><!-- /.navigation-wrapper -->
+
+
+<div class="header-menu header-menu-top">
+    <ul class="header-item-container">
+      <li class="header-item-title header-toggle "><a href="#menu"><h2><i class="fa fa-bars"></i></h2></a></li>
+      <li class="header-item-title">
+        <a href="/">
+          
+            <img class="logo" src="/images/logo.png" alt="晓_晨DEV">
+          
+          <a href="/" class="title"> 晓_晨DEV</a>
+        </a>
+      </li>
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="/about-me/"><h3>关于我</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+          <li class="header-item "><a href="#"><h3>收藏</h3></a>
+            <ul class="header-submenu">
+              
+                <li class="sub-item"><a href="/android/Android学习相关资源/">Android学习相关资源</a></li>
+              
+                <li class="sub-item"><a href="/编程学习/编程学习资源整理/">编程学习资源整理</a></li>
+              
+                <li class="sub-item"><a href="/博客使用教程/">博客使用教程</a></li>
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="/tags"><h3>标记</h3></a></li>
+            
+        
+      
+        
+        
+
+        
+          <li class="header-item "><a href="/categories"><h3>目录</h3></a>
+            <ul class="header-submenu">
+              
+                
+                  <li class="sub-item"><a href="/categories/#Android">Android</a></li>
+              
+                
+                  <li class="sub-item"><a href="/categories/#编程学习">编程学习</a></li>
+              
+            </ul>
+          </li>
+        
+      
+        
+        
+
+        
+            
+                <li class="header-item "><a href="/"><h3>主页</h3></a></li>
+            
+        
+      
+      <li class="header-item"><a href="/search"><h3><i class="fa fa-search"></i></h3></a></li>
+    </ul>
+  </div>
+<div class="entry-header">
+  <div class="header-title">
+    <div class="header-title-wrap">
+      <h1>Git速查表</h1>
+      
+        <h2><span class="entry-date date published updated"><time datetime="2015-06-02T00:00:00-04:00">June 02, 2015</time></span></h2>
+      
+
+      
+        <p class="entry-reading-time">
+          <i class="fa fa-clock-o"></i>
+          
+          Reading time ~1 minute
+        </p><!-- /.entry-reading-time -->
+      
+    </div><!-- /.header-title-wrap -->
+  </div><!-- /.header-title -->
+</div><!-- /.entry-header -->
+
+
+<nav id="menu" style="display: none">
+  <ul>
+    
+      
+        <li><a href="/"><h3>主页</h3></a></li>
+      
+    
+      
+        <li><a href="/categories"><h3>目录</h3></a>
+          <ul>
+            
+              
+                <li><a href="/categories/#Android">Android</a></li>
+            
+              
+                <li><a href="/categories/#编程学习">编程学习</a></li>
+            
+          </ul>
+        </li>
+      
+    
+      
+        <li><a href="/tags"><h3>标记</h3></a></li>
+      
+    
+      
+        <li><a href="#"><h3>收藏</h3></a>
+          <ul>
+            
+              <li><a href="/android/Android学习相关资源/">Android学习相关资源</a></li>
+            
+              <li><a href="/编程学习/编程学习资源整理/">编程学习资源整理</a></li>
+            
+              <li><a href="/博客使用教程/">博客使用教程</a></li>
+            
+          </ul>
+        </li>
+      
+    
+      
+        <li><a href="/about-me/"><h3>关于我</h3></a></li>
+      
+    
+  </ul>
+</nav>
+
 
 
 
 <div id="main" role="main">
-  <div class="article-author-side">
-    
-
-
-<div itemscope itemtype="http://schema.org/Person">
-
-
-	<img src="/images/bio-photo.jpg" class="bio-photo" alt="晓_晨DEV bio photo">
-
-
-  <h3 itemprop="name">晓_晨DEV</h3>
-  <p>Android开发者，iOS学习中，各种技术粉.公众号xiaochenAndroid欢迎关注</p>
-  <a href="mailto:cctanfujun@163.com" class="author-social" target="_blank"><i class="fa fa-fw fa-envelope-square"></i> Email</a>
-  
-  
-  
-  
-  
-  
-  
-  <a href="http://github.com/cctanfujun" class="author-social" target="_blank"><i class="fa fa-fw fa-github"></i> Github</a>
-  
-  
-  
-  
-  
-  
-  
-  
-  <a href="http://www.weibo.com/xiaochendev" class="author-social" target="_blank"><i class="fa fa-fw fa-weibo"></i> Weibo</a>
-  
-  <a href="/feed.xml" class="author-social" target="_blank"><i class="fa fa-fw fa-rss"></i> RSS</a>
-</div>
-
-  </div>
-  <article class="post">
-    <div class="headline-wrap">
-      
-        <h1><a href="/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/" rel="bookmark" title="Git速查表">Git速查表</a></h1>
-      
-    </div><!--/ .headline-wrap -->
-    <div class="article-wrap">
+  <article class="hentry">
+    <div class="entry-content">
+        
+      <h1 class="post-title entry-title">Git速查表</h1>
       <p>放两张Git速查表，方便自己使用
 <br /><br />
 <img src="/images/Git常用命令.jpg" alt="Git1" />
@@ -176,71 +232,129 @@
 
 <p><img src="/images/Git cheat sheet.jpg" alt="Git1" /></p>
 
-      
-      
-      <footer role="contentinfo">
-        <div class="bdsharebuttonbox"><h6>分享到</h6><a href="#" class="bds_tsina" data-cmd="tsina" title="分享到新浪微博"></a><a href="#" class="bds_weixin" data-cmd="weixin" title="分享到微信"></a><a href="#" class="bds_qzone" data-cmd="qzone" title="分享到QQ空间"></a><a href="#" class="bds_sqq" data-cmd="sqq" title="分享到QQ好友"></a><a href="#" class="bds_renren" data-cmd="renren" title="分享到人人网"></a><a href="#" class="bds_tqq" data-cmd="tqq" title="分享到腾讯微博"></a></div>
-<br/>
-<br/>
-<script>window._bd_share_config={"common":{"bdSnsKey":{},"bdText":"","bdMini":"1","bdMiniList":["print","qzone","tsina","weixin","tqq","sqq"],"bdPic":"","bdStyle":"1","bdSize":"16"},"share":{}};with(document)0[(getElementsByTagName('head')[0]||body).appendChild(createElement('script')).src='http://bdimg.share.baidu.com/static/api/js/share.js?v=89860593.js?cdnversion='+~(-new Date()/36e5)];</script>
-        <!-- 多说评论框 start -->
-      
+      <footer class="entry-meta">
+        <span class="entry-tags"><a href="/tags#Tool" title="Pages tagged Tool" class="tag"><span class="term">Tool</span></a></span>
+        <span>Updated on <span class="entry-date date updated"><time datetime="2015-06-2">June 02, 2015</time></span></span>
+        
+        <span class="author vcard"><span class="fn">晓_晨DEV</span></span>
+        <div class="social-share">
+  <ul class="socialcount socialcount-small inline-list">
+  	<li class="facebook"><a href="http://v.t.sina.com.cn/share/share.php?title= 这篇文章不错 Git速查表 /Git%E9%80%9F%E6%9F%A5%E8%A1%A8/" 
+  		target="_blank" 
+  		title="Share on Weibo"><span class="count"><i class="fa fa-weibo"></i> Weibo</span></a></li>
+    <li class="facebook"><a href="https://www.facebook.com/sharer/sharer.php?u=/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/" title="Share on Facebook"><span class="count"><i class="fa fa-facebook-square"></i> Like</span></a></li>
+    <li class="twitter"><a href="https://twitter.com/intent/tweet?text=/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/" title="Share on Twitter"><span class="count"><i class="fa fa-twitter-square"></i> Tweet</span></a></li>
+    <li class="googleplus"><a href="https://plus.google.com/share?url=/Git%E9%80%9F%E6%9F%A5%E8%A1%A8/" title="Share on Google Plus"><span class="count"><i class="fa fa-google-plus-square"></i> +1</span></a></li>
+  </ul>
+</div><!-- /.social-share -->
+
+        
+      <hr/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
+        <br/>
       <div class="ds-thread" data-thread-key="/Git速查表" data-title="Git速查表" data-url="//Git%E9%80%9F%E6%9F%A5%E8%A1%A8/"></div>
-      <!-- 多说评论框 end -->
-      
-        <p class="byline"><strong>Git速查表</strong> 发表于 <time datetime="2015-06-02T00:00:00+08:00">2015-06-02</time> 最后修改于 <time datetime="2015-06-02">2015-06-02</time>.</p>
       </footer>
-    </div><!-- /.article-wrap -->
-   </article>
+
+    
+    </div><!-- /.entry-content -->
+    
+    <div class="read-more">
+  <div class="read-more-header">
+    <a href="http://tanfujun.com/about-me/" class="read-more-btn">关于我</a>
+  </div><!-- /.read-more-header -->
+  <div class="read-more-content author-info">
+    <h3>晓_晨DEV</h3>
+    <div class="author-container">
+      <img class="author-img" src="/images/avatar.jpg" alt="晓_晨DEV" />
+      <div class="author-bio">每个人心中都有一团火 路过的人只看到烟 </div>
+    </div>
+    <div class="author-share">
+      <ul class="list-inline social-buttons">
+        
+          <li><a href="https://github.com/cctanfujun" target="_blank"><i class="fa fa-github fa-fw"></i></a></li>
+        
+          <li><a href="http://weibo.com/xiaochendev" target="_blank"><i class="fa fa-weibo fa-fw"></i></a></li>
+        
+          <li><a href="mailto:cctanfujun@163.com" target="_blank"><i class="fa fa-envelope-o fa-fw"></i></a></li>
+        
+          <li><a href="" target="_blank"><i class="fa fa-linkedin fa-fw"></i></a></li>
+        
+          <li><a href="" target="_blank"><i class="fa fa-youtube fa-fw"></i></a></li>
+        
+      </ul>
+      
+        <a aria-label="Follow @cctanfujun on GitHub" data-style="mega" href="https://github.com/cctanfujun" class="github-button">Follow @cctanfujun</a>
+      
+      <br>
+      
+    </div>
+  </div>
+</div>
+
+    <div class="read-more">
   
- 
+    <div class="read-more-header">
+      <a href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/" class="read-more-btn">Read More</a>
+    </div><!-- /.read-more-header -->
+    <div class="read-more-content">
+      <h3><a href="/android/APP%E7%A0%94%E5%8F%91%E5%BD%95%E8%AF%BB%E5%90%8E%E6%84%9F/" title="APP研发录读后感">APP研发录读后感</a></h3>
+      <p>## 第一章 重构1.拆分Activity 生命周期 onCreate（） -> initVariables()初始化变量、initViews（）加载布局文件、loadData（）。在BaseActivity声明为抽象方法。## 第二章 网络框架设计1.Get请求数据 Po...&hellip; <a href="/android/APP%E7%A0%94%E5%8F%91%E5%BD%95%E8%AF%BB%E5%90%8E%E6%84%9F/">Continue reading</a></p>
+    </div><!-- /.read-more-content -->
+  
+  <div class="read-more-list">
+    
+      <div class="list-item">
+        <h4><a href="/android/React-Native%E5%BF%AB%E9%80%9F%E5%88%9D%E5%A7%8B%E5%8C%96/" title="React Native快速初始化">React Native快速初始化</a></h4>
+        <span>Published on January 20, 2016</span>
+      </div><!-- /.list-item -->
+    
+      <div class="list-item">
+        <h4><a href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/" title="打造程序员用的终端">打造程序员用的终端</a></h4>
+        <span>Published on May 26, 2015</span>
+      </div><!-- /.list-item -->
+    
+  </div><!-- /.read-more-list -->
+</div><!-- /.read-more -->
+  </article>
 </div><!-- /#main -->
 
-<div class="footer-wrap">
-  
-  <div class="related-articles">
-  <h4>你可能还喜欢 <small class="pull-right">(<a href="/posts/">查看全部文章</a>)</small></h4>
-    <ul>
-    
-      <li><a href="/10%E5%88%86%E9%92%9F%E6%89%93%E9%80%A0%E7%A8%8B%E5%BA%8F%E5%91%98%E7%94%A8%E7%9A%84%E7%BB%88%E7%AB%AF/" title="打造程序员用的终端">打造程序员用的终端</a></li>
-    
-      <li><a href="/%E4%B8%BA%E4%BB%80%E4%B9%88%E4%BD%BF%E7%94%A8Android%20Studio/" title="Why Android Studio? 及Tips">Why Android Studio? 及Tips</a></li>
-    
-      <li><a href="/%E5%A6%82%E6%9E%9C%E4%BD%A0%E7%8E%B0%E5%9C%A8%E5%AD%A6Android/" title="如果你现在学Android">如果你现在学Android</a></li>
-    
-    </ul>
-    <hr />
-  </div><!-- /.related-articles -->
-  
-  <footer>
-    
-
-<span>&copy; 2015 晓_晨DEV. </span>
-
-  </footer>
-</div><!-- /.footer-wrap -->
-
-<script src="/assets/js/jquery.min.js"></script>
-<script>window.jQuery || document.write('<script src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
-<script src="/assets/js/scripts.min.js"></script>
+<script type="text/javascript" src="//ajax.useso.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">window.jQuery || document.write('<script type="text/javascript" src="/assets/js/vendor/jquery-1.9.1.min.js"><\/script>')</script>
+<script type="text/javascript" src="/assets/js/scripts.min.js"></script>
+<script type="text/javascript" async defer id="github-bjs" src="https://buttons.github.io/buttons.js"></script>
+<script type="text/javascript">!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src='/assets/js/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 
-  
+
+
 <!-- 多说公共JS代码 start (一个网页只需插入一次) -->
 <script type="text/javascript">
 var duoshuoQuery = {short_name:"xiaochendev"};
-    (function() {
-        var ds = document.createElement('script');
-        ds.type = 'text/javascript';ds.async = true;
-        ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
-        ds.charset = 'UTF-8';
-        (document.getElementsByTagName('head')[0] 
-         || document.getElementsByTagName('body')[0]).appendChild(ds);
-    })();
-    </script>
+	(function() {
+		var ds = document.createElement('script');
+		ds.type = 'text/javascript';ds.async = true;
+		ds.src = (document.location.protocol == 'https:' ? 'https:' : 'http:') + '//static.duoshuo.com/embed.js';
+		ds.charset = 'UTF-8';
+		(document.getElementsByTagName('head')[0] 
+		 || document.getElementsByTagName('body')[0]).appendChild(ds);
+	})();
+	</script>
 <!-- 多说公共JS代码 end -->
 
-	        
+
+
+
+
+
+<div class="footer-wrapper">
+  <footer role="contentinfo">
+    <span>&copy; 2016 晓_晨DEV.</span>
+
+  </footer>
+</div><!-- /.footer-wrapper -->
 
 </body>
 </html>

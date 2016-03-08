@@ -2,6 +2,7 @@
 layout: post
 title: Why Android Studio? 及Tips
 excerpt: "告诉你为什么要使用Android Studio？ 以及一些好用的地方"
+categories: [Android]
 tags: [Android]
 modified: 2015-05-13
 comments: true

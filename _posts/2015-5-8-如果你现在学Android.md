@@ -2,11 +2,12 @@
 layout: post
 title: 如果你现在学Android
 excerpt: "写给想现在学习Android的朋友"
+categories: [Android]
 tags: [Android]
 modified: 2015-05-08
 comments: true
 ---
-{% include _toc.html %}
+
 
 虽然现在网上有不少Android的教程，不过现在Android的发展已经到了5.1，很多之前的开发教程和学习建议已经不是很适用，决定以自己的见解写一篇Android学习的教程，如果大家有什么好的意见或建可以评论给我。
 

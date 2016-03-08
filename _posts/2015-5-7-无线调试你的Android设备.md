@@ -2,6 +2,7 @@
 layout: post
 title: 无线调试你的Android设备
 excerpt: "省下一条数据线，用wifi连接你的Android真机"
+categories: [Android]
 tags: [Android]
 modified: 2015-05-07
 comments: true
