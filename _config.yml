@@ -31,6 +31,13 @@ menu:
         url: '/编程学习/编程学习资源整理/'
       - title: '博客使用教程'
         url: '/博客使用教程/'
+  - title: '工具箱'
+    url: '#'
+    submenu:
+       - title: 'Android代码片段'
+         url: '/android/Android代码片段/'
+       - title: '开发工具'
+         url: '/android/开发实用工具/'
   - title: '关于我'
     url : '/about-me/'
 
