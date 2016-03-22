@@ -8,9 +8,11 @@ modified: 2016-03-21
 comments: true
 ---
 
-#单例模式 
 
-## 双重校检写法
+## 单例模式 
+
+### 双重校检写法
+
 
 ```java
 
@@ -33,7 +35,9 @@ public class Singleton{
 
 ```
 
-## 静态内部类写法
+
+### 静态内部类写法
+
 
 ```java
 
