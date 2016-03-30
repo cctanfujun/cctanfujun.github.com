@@ -8,12 +8,15 @@ modified: 2016-03-21
 comments: true
 ---
 
+
 ## 单例模式 
 
 ### 双重校检写法
 
 
+
 {% highlight java %}
+
 
 public class Singleton{
   private volatile static Singleton singleton;
@@ -29,6 +32,7 @@ public class Singleton{
   }
 
 }
+
 
 {% endhighlight %}
 
@@ -47,11 +51,14 @@ public class Singleton {
   } 
 }
 
+
 {% endhighlight %}
+
 
 ## Drawable互转Bitmap
 
 ### Drawable转Bitmap
+
 
 {% highlight java %}
 
@@ -60,9 +67,11 @@ Drawable drawable = res.getDrawable(R.drawable.myimage);
 BitmapDrawable bd = (BitmapDrawable) d;
 Bitmap bm = bd.getBitmap();
 
+
 {% endhighlight %}
 
 {% highlight java %}
+
 
 public static Bitmap drawableToBitmap(Drawable drawable) {       
         Bitmap bitmap = Bitmap.createBitmap(
@@ -76,12 +85,14 @@ public static Bitmap drawableToBitmap(Drawable drawable) {
         return bitmap;
 }
 
+
 {% endhighlight %}
 
 
 ### Bitmap转Drawable
 
 {% highlight java %}
+
 
 Bitmap bm=xxx; //xxx根据你的情况获取
 BitmapDrawable bd=BitmapDrawable(bm);
@@ -91,18 +102,23 @@ mPicPath//本地图片路径转成Bitmap格式
 Bitmap pic = BitmapFactory.decodeFile(this.mPicPath);
 		image.setImageBitmap(pic);
 
+
 {% endhighlight %}
+
 
 ## String与InputStream相互转换
 
 ### String to InputStream
 
+
 {% highlight java %}
+
 
 String str = "String与InputStream相互转换";
 InputStream   in_nocode   =   new   ByteArrayInputStream(str.getBytes());   
 InputStream   in_withcode   =   new   ByteArrayInputStream(str.getBytes("UTF-8"));
 InputStream to String
+
 
 {% endhighlight %}
 
@@ -111,6 +127,7 @@ InputStream to String
 方法1：
 
 {% highlight java %}
+
 
 public String convertStreamToString(InputStream is) {   
  BufferedReader reader = new BufferedReader(new InputStreamReader(is));   
@@ -134,11 +151,13 @@ public String convertStreamToString(InputStream is) {
       return sb.toString();   
   }
   
+
 {% endhighlight %}
 
 方法2：
 
 {% highlight java %}
+
 
 public String inputStream2String (InputStream in) throws  IOException { 
         StringBuffer  out = new StringBuffer(); 
@@ -149,11 +168,13 @@ public String inputStream2String (InputStream in) throws  IOException {
         return out.toString(); 
 }
 
+
 {% endhighlight %}
 
 方法3：
 
 {% highlight java %}
+
 
 public static String inputStream2String(InputStream is) throws  IOException{ 
         ByteArrayOutputStream baos  = new ByteArrayOutputStream(); 
@@ -164,13 +185,17 @@ public static String inputStream2String(InputStream is) throws  IOException{
        return baos.toString(); 
 }
 
+
 {% endhighlight %}
+
 
 ## Bitmap 和 byte[]互转
 
 ### Bitmap → byte[]
 
+
 {% highlight java %}
+
 
 private byte[] Bitmap2Bytes(Bitmap bm){
     ByteArrayOutputStream baos = new ByteArrayOutputStream();
@@ -179,11 +204,13 @@ private byte[] Bitmap2Bytes(Bitmap bm){
 }
 
 
+
 {% endhighlight %}
 
 ### byte[] → Bitmap
 
 {% highlight java %}
+
 
 private Bitmap Bytes2Bimap(byte[] b){
     if(b.length!=0){
@@ -193,11 +220,13 @@ private Bitmap Bytes2Bimap(byte[] b){
            }
 }
 
+
 {% endhighlight %}
 
 ### 保存图片到sd卡
 
 {% highlight java %}
+
 
 public void saveBitmapToFile(String url, String filePath) {
         File iconFile = new File(filePath);
@@ -236,11 +265,13 @@ public void saveBitmapToFile(String url, String filePath) {
         }
     }
     
+
 {% endhighlight %}
 
 ### 判断sd卡是否存在
 
 {% highlight java %}
+
 
 public boolean CheckSD() {
     if (android.os.Environment.getExternalStorageState().equals(
@@ -251,11 +282,13 @@ public boolean CheckSD() {
     }
 }    
 
+
 {% endhighlight %}
 
 ## dip转px
 
 {% highlight java %}
+
 
 public int convertDipOrPx(int dip) {
     float scale = MarketApplication.getMarketApplicationContext()
@@ -263,7 +296,9 @@ public int convertDipOrPx(int dip) {
     return (int) (dip * scale + 0.5f * (dip >= 0 ? 1 : -1));
 }       
 
+
 {% endhighlight %}
+
 
 ## 网络
 
@@ -271,7 +306,9 @@ public int convertDipOrPx(int dip) {
 
 方法一：
 
+
 {% highlight java %}
+
 
 /**
      * 网络是否可用
@@ -291,12 +328,14 @@ public int convertDipOrPx(int dip) {
         }
         return false;
     }
+
     
 {% endhighlight %}
 
 方法二：
 
 {% highlight java %}
+
 
 /*
  * 判断网络连接是否已开 2012-08-20true 已打开 false 未打开
@@ -312,12 +351,14 @@ public static boolean isConn(Context context) {
      return bisConnFlag;
 }
 
+
 {% endhighlight %}
 
 
 ### 判断是不是Wifi连接
 
 {% highlight java %}
+
 
 public static boolean isWifiActive(Context icontext) {
     Context context = icontext.getApplicationContext();
@@ -338,11 +379,13 @@ public static boolean isWifiActive(Context icontext) {
     return false;
 }
 
+
 {% endhighlight %}
 
 ### 判断当前网络类型
 
 {% highlight java %}
+
 
 private static int netCheck(Context context) {
         ConnectivityManager conMan = (ConnectivityManager) context
@@ -360,11 +403,13 @@ private static int netCheck(Context context) {
         }
     }
 
+
 {% endhighlight %}
 
 ### 判断是否APK是否安装过
 
 {% highlight java %}
+
 
 public boolean checkApkExist(Context context, String packageName) {
         if (packageName == null || "".equals(packageName))
@@ -380,6 +425,7 @@ public boolean checkApkExist(Context context, String packageName) {
             return false;
         }
     }
+
     
 {% endhighlight %}
   
@@ -387,6 +433,7 @@ public boolean checkApkExist(Context context, String packageName) {
 
 
 {% highlight java %}
+
 
 public void installApk(Context context, String strFileAllName) {
     File file = new File(strFileAllName);
@@ -398,11 +445,13 @@ public void installApk(Context context, String strFileAllName) {
     context.startActivity(intent);
 }
 
+
 {% endhighlight %}
 
 ### 卸载APK
 
 {% highlight java %}
+
 
 public void UninstallApk(Context context, String strPackageName) {
     Uri packageURI = Uri.parse("package:" + strPackageName);
@@ -410,4 +459,6 @@ public void UninstallApk(Context context, String strPackageName) {
     context.startActivity(uninstallIntent);
 }
 
+
 {% endhighlight %}
+
