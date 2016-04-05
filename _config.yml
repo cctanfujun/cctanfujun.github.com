@@ -34,6 +34,8 @@ menu:
   - title: '工具箱'
     url: '#'
     submenu:
+       - title: '技术博客'
+         url: '/android/国内技术博客/'
        - title: 'Android代码片段'
          url: '/android/Android代码片段/'
        - title: '开发工具'
