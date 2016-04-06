@@ -462,3 +462,110 @@ public void UninstallApk(Context context, String strPackageName) {
 
 {% endhighlight %}
 
+## 图片
+
+### 图片上传
+
+客户端：
+
+{% highlight java %}
+
+File file = new File(imageUrl);   
+        String httpUrl = httpDomain+"AddImageServlet"+"?gid="+gid;   
+        HttpPost request = new HttpPost(httpUrl);    
+        HttpClient httpClient = new DefaultHttpClient();  
+        FileEntity entity = new FileEntity(file,"binary/octet-stream");  
+        HttpResponse response;  
+try {  
+            request.setEntity(entity);  
+            entity.setContentEncoding("binary/octet-stream");  
+            response = httpClient.execute(request);  
+               
+//如果返回状态为200，获得返回的结果  
+ if(response.getStatusLine().getStatusCode()==HttpStatus.SC_OK){    
+……//图片上传成功             
+}  
+}  
+catch(Exception e){   
+}
+
+{% endhighlight %}
+
+服务端：
+
+{% highlight java %}
+        //获得新闻id  
+        String gid = request.getParameter("gid");         
+        String filePath = getRealPath(request) + "\\userpic\\";   
+        //      定义上载文件的最大字节   
+        int MAX_SIZE = 102400 * 102400;           
+        //      声明文件读入类   
+        DataInputStream in = null;   
+        FileOutputStream fileOut = null;              
+        //      取得客户端上传的数据类型   
+        String contentType = request.getContentType();                
+        if(contentType.indexOf("binary/octet-stream") >= 0){   
+            //      读入上传的数据   
+            in = new DataInputStream(request.getInputStream());   
+            int formDataLength = request.getContentLength();   
+            //  如果图片过大  
+            if(formDataLength > MAX_SIZE){   
+                String errormsg=("上传的文件字节数不可以超过" + MAX_SIZE);  
+                out.println(errormsg);  
+                return ;  
+            }   
+        //      保存上传文件的数据   
+        byte dataBytes[] = new byte[formDataLength];   
+        int byteRead = 0;   
+        int totalBytesRead = 0;   
+        //      上传的数据保存在byte数组   
+        while(totalBytesRead < formDataLength){   
+        byteRead = in.read(dataBytes,totalBytesRead,formDataLength);   
+        totalBytesRead += byteRead;   
+          }   
+        String fileName = filePath + gid+".png";  
+         //     检查上载文件的目录是否存在   
+        File fileDir = new File(filePath);   
+        if(!fileDir.exists()){   
+        fileDir.mkdirs();   
+        }  
+        //      创建文件的写出类   
+        fileOut = new FileOutputStream(fileName);   
+        //      保存文件的数据   
+        fileOut.write(dataBytes);   
+        fileOut.close();  
+           
+{% endhighlight %}
+
+### 图片下载
+
+{% highlight java %}
+
+//获得网络中的图片  
+    public Bitmap getGossipImage(String gid){         
+        String httpUrl = httpDomain+"userpic/"+gid+".png";        
+        Bitmap bitmap = null;            
+        HttpGet httpRequest = new HttpGet(httpUrl);    
+        //取得HttpClient 对象    
+        HttpClient httpclient = new DefaultHttpClient();    
+        try {    
+            //请求httpClient ，取得HttpRestponse    
+            HttpResponse httpResponse = httpclient.execute(httpRequest);    
+            if(httpResponse.getStatusLine().getStatusCode() == HttpStatus.SC_OK){    
+                //取得相关信息 取得HttpEntiy    
+                HttpEntity httpEntity = httpResponse.getEntity();    
+                InputStream is = httpEntity.getContent();                   
+                bitmap = BitmapFactory.decodeStream(is);    
+                is.close();     
+            }else{    
+                 Toast.makeText(context, "连接失败!", Toast.LENGTH_SHORT).show();        
+            }     
+                 
+        } catch (ClientProtocolException e) {    
+            e.printStackTrace();    
+        } catch (IOException e) {     
+            e.printStackTrace();    
+        }      
+        return bitmap;  
+    }  
+{% endhighlight %}
