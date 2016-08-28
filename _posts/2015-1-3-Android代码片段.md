@@ -1,11 +1,12 @@
 ---
 layout: post
-title: Android代码片段
-excerpt: "Android代码片段"
-tags: [Android]
-categories: [Android]
-modified: 2016-03-21
-comments: true
+title: "Android代码片段"
+subtitle: "Android代码片段"
+header-img: "img/post-bg-default2.png"
+author:     "晓晨DEV"
+date: 2016-03-21
+tags:
+ - Android
 ---
 
 
@@ -15,7 +16,7 @@ comments: true
 
 
 
-{% highlight java %}
+```
 
 
 public class Singleton{
@@ -34,11 +35,11 @@ public class Singleton{
 }
 
 
-{% endhighlight %}
+```
 
 ### 静态内部类写法
 
-{% highlight java %}
+```
 
 
 public class Singleton { 
@@ -52,7 +53,7 @@ public class Singleton {
 }
 
 
-{% endhighlight %}
+```
 
 
 ## Drawable互转Bitmap
@@ -60,7 +61,7 @@ public class Singleton {
 ### Drawable转Bitmap
 
 
-{% highlight java %}
+```
 
 Resources res = getResources();
 Drawable drawable = res.getDrawable(R.drawable.myimage);
@@ -68,7 +69,7 @@ BitmapDrawable bd = (BitmapDrawable) d;
 Bitmap bm = bd.getBitmap();
 
 
-{% endhighlight %}
+```
 
 {% highlight java %}
 

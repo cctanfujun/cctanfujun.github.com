@@ -1,11 +1,12 @@
 ---
 layout: post
-title: React Native快速初始化
-excerpt: “ReactNative快速初始化教程”
-category: [Android]
-tags: [Android,iOS]
-modified: 2016-1-20
-comments: true
+title: "React Native快速初始化"
+subtitle: “ReactNative快速初始化教程”
+header-img: "img/post-bg-default1.png"
+date: 2016-1-20
+tags: 
+ - Android
+ - iOS
 ---
 
 

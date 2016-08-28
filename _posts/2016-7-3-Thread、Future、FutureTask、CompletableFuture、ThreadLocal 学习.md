@@ -1,11 +1,11 @@
 ---
 layout: post
-title: Thread、Future、FutureTask、CompletableFuture、ThreadLocal 学习
-excerpt: "Thread、Future、FutureTask、CompletableFuture、ThreadLocal 学习"
-tags: [Java]
-categories: [Java]
-modified: 2016-07-03
-comments: true
+title: "Thread、Future、FutureTask、CompletableFuture、ThreadLocal 学习"
+
+header-img: "img/post-bg-default4.png"
+date: 2016-07-03
+tags: 
+ - Java
 ---
 
 # Thread

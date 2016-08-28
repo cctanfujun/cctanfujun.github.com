@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 如果你现在学Android
-excerpt: "写给想现在学习Android的朋友"
-categories: [Android]
-tags: [Android]
-modified: 2015-05-08
-comments: true
+title: "如果你现在学Android"
+subtitle: "写给想现在学习Android的朋友"
+date: 2015-05-08
+header-img: "img/post-bg-default3.png"
+tags:
+ - Android
 ---
 
 

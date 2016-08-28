@@ -1,12 +1,15 @@
 ---
 layout: post
-title: Why Android Studio? 及Tips
-excerpt: "告诉你为什么要使用Android Studio？ 以及一些好用的地方"
-categories: [Android]
-tags: [Android]
-modified: 2015-05-13
-comments: true
+title: "Why Android Studio 及Tips"
+subtitle: "告诉你为什么要使用 Android Studio 以及一些好用的地方"
+header-img: "img/post-bg-default4.png"
+author:    "晓晨DEV"
+date: 2015-05-13
+tags: 
+ - Android 
 ---
+
+
 Android Studio作为Google推荐开发Android使用的IDE，今后成为Android开发的主要工具是毋庸置疑的，从Eclipse过度过来的你要如何使用它呢！   
 
 # 为什么使用Android Stuido

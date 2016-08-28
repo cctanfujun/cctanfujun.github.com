@@ -1,11 +1,11 @@
 ---
 layout: post
-title: 无线调试你的Android设备
-excerpt: "省下一条数据线，用wifi连接你的Android真机"
-categories: [Android]
-tags: [Android]
-modified: 2015-05-07
-comments: true
+title: "无线调试你的Android设备"
+subtitle: "省下一条数据线，用wifi连接你的Android真机"
+date : 2015-05-07
+tags :
+ - Developer Tips
+
 ---
 
 我的MBP只有两个USB口，连接上鼠标和机械键盘没有接口来插数据线了，反复插拔很麻烦，（之前买了个HUB，由于HUB是3.0接口连接上笔记本上不了网，大家注意如果给MBP买HUB要买2.0接口的，悲剧的送人了）决定研究下无线连接手机进行调试。
